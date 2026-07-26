@@ -13,7 +13,6 @@ interface CaseStudyDetailProps {
 
 export const CaseStudyDetail: React.FC<CaseStudyDetailProps> = ({ study, onBack }) => {
   const [copiedLink, setCopiedLink] = useState(false);
-  const [showFullDocumentation, setShowFullDocumentation] = useState(true);
 
   const handleCopyLink = () => {
     setCopiedLink(true);
@@ -55,12 +54,12 @@ export const CaseStudyDetail: React.FC<CaseStudyDetailProps> = ({ study, onBack 
         <div>
           
           {/* Hero Section */}
-          <section className="relative overflow-hidden bg-gradient-to-b from-amber-50/60 via-orange-50/30 to-white pt-12 pb-20 px-4 sm:px-6 lg:px-8">
+          <section className="relative overflow-hidden bg-gradient-to-b from-amber-50/60 via-orange-50/30 to-white pt-12 pb-16 px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center space-y-6">
               
               {/* Pill Badge */}
               <div className="inline-block px-3.5 py-1.5 bg-amber-100/80 border border-orange-200 text-[#fc8019] font-extrabold text-[11px] uppercase tracking-widest rounded-full shadow-sm">
-                UX & Product Strategy Case Study 2024
+                Product Case Study 2024
               </div>
 
               {/* Title */}
@@ -73,26 +72,8 @@ export const CaseStudyDetail: React.FC<CaseStudyDetailProps> = ({ study, onBack 
                 Revolutionizing group dining with real-time synchronized carts and intelligent auto-split payments for offices and campuses.
               </p>
 
-              {/* CTA Buttons */}
-              <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
-                <a
-                  href="#overview"
-                  className="px-6 py-3.5 bg-[#fc8019] hover:bg-[#e06d0e] text-white font-extrabold text-xs sm:text-sm uppercase tracking-wider rounded-xl shadow-lg shadow-orange-500/25 transition-all transform hover:-translate-y-0.5 flex items-center gap-2 cursor-pointer"
-                >
-                  <span>Launch Overview</span>
-                  <ArrowRight className="w-4 h-4" />
-                </a>
-
-                <button
-                  onClick={() => setShowFullDocumentation(!showFullDocumentation)}
-                  className="px-6 py-3.5 bg-white border border-slate-300 hover:border-slate-400 text-slate-800 font-extrabold text-xs sm:text-sm uppercase tracking-wider rounded-xl shadow-sm hover:shadow transition-all cursor-pointer"
-                >
-                  {showFullDocumentation ? 'Hide PM Specs' : 'Read 20-Step PM Specs'}
-                </button>
-              </div>
-
               {/* 3D Realistic Smartphone Mockups Trio */}
-              <div className="pt-12 grid grid-cols-1 md:grid-cols-3 gap-6 items-center max-w-4xl mx-auto">
+              <div className="pt-10 grid grid-cols-1 md:grid-cols-3 gap-6 items-center max-w-4xl mx-auto">
                 
                 {/* PHONE 1: Start Group Order (Left) */}
                 <div className="bg-slate-900 p-3 rounded-[36px] shadow-2xl border-4 border-slate-800 transform md:-rotate-2 hover:rotate-0 transition-transform duration-300">
@@ -300,125 +281,413 @@ export const CaseStudyDetail: React.FC<CaseStudyDetailProps> = ({ study, onBack 
             </div>
           </section>
 
-          {/* Project Overview Section */}
-          <section id="overview" className="py-16 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto space-y-10">
+          {/* ========================================================================= */}
+          {/* COMPLETE 20-STEP HUMAN-WRITTEN PM CASE STUDY */}
+          {/* ========================================================================= */}
+          <main className="py-16 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto space-y-16 text-slate-800 leading-relaxed">
             
-            {/* Overview Intro Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
-              
-              {/* Left Column Text */}
-              <div className="md:col-span-7 space-y-4">
-                <div className="flex items-center gap-2">
-                  <div className="w-8 h-1 bg-[#fc8019] rounded-full"></div>
-                  <h2 className="text-2xl font-black text-slate-900 tracking-tight">Project Overview</h2>
-                </div>
-                <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-                  Office and campus group lunches are often plagued by chaotic coordination. Manually tracking orders, constant follow-ups, and the awkward friction of split payments lead to delayed orders and frustrated teams. <strong>Swiggy Squad Pay</strong> was designed to eliminate these pain points.
-                </p>
-              </div>
-
-              {/* Core Feature Top Right Card */}
-              <div className="md:col-span-5 bg-white border border-slate-200 rounded-2xl p-5 space-y-2 shadow-sm">
-                <div className="flex items-center justify-between text-[#fc8019]">
-                  <span className="text-[10px] font-black uppercase tracking-wider">Core Feature</span>
-                  <Clock className="w-4 h-4" />
-                </div>
-                <h3 className="text-base font-extrabold text-slate-900">Real-Time Sync</h3>
-                <p className="text-xs text-slate-500 leading-relaxed">
-                  Live cart updates for every participant as they add items directly via web or mobile link.
-                </p>
-              </div>
-            </div>
-
-            {/* 4 Feature Cards Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-              
-              {/* Card 1: The Problem */}
-              <div className="bg-amber-50/70 border border-amber-200/80 rounded-2xl p-5 space-y-2">
-                <div className="w-8 h-8 bg-amber-100 text-[#fc8019] rounded-xl flex items-center justify-center font-bold text-sm">
-                  👥
-                </div>
-                <h3 className="text-sm font-extrabold text-slate-900">The Problem</h3>
-                <p className="text-xs text-slate-600 leading-relaxed">
-                  Fragmented communication channels and manual debt tracking for group meals in corporate environments.
-                </p>
-              </div>
-
-              {/* Card 2: The Solution */}
-              <div className="bg-emerald-50/70 border border-emerald-200/80 rounded-2xl p-5 space-y-2">
-                <div className="w-8 h-8 bg-emerald-100 text-emerald-700 rounded-xl flex items-center justify-center font-bold text-sm">
-                  💳
-                </div>
-                <h3 className="text-sm font-extrabold text-slate-900">The Solution</h3>
-                <p className="text-xs text-slate-600 leading-relaxed">
-                  A synchronized "Squad Cart" where everyone adds their own items, and payments are auto-split at checkout.
-                </p>
-              </div>
-
-              {/* Card 3: One-Click Invite */}
-              <div className="bg-orange-50/70 border border-orange-200/80 rounded-2xl p-5 space-y-2">
-                <div className="w-8 h-8 bg-orange-100 text-[#fc8019] rounded-xl flex items-center justify-center font-bold text-sm">
-                  🔗
-                </div>
-                <h3 className="text-sm font-extrabold text-slate-900">One-Click Invite</h3>
-                <p className="text-xs text-slate-600 leading-relaxed">
-                  WhatsApp & Direct link integration for instant group forming without requiring app downloads.
-                </p>
-              </div>
-
-              {/* Card 4: Secure Split */}
-              <div className="bg-slate-900 text-white rounded-2xl p-5 space-y-2 shadow-md">
-                <div className="w-8 h-8 bg-slate-800 text-emerald-400 rounded-xl flex items-center justify-center font-bold text-sm">
-                  🛡️
-                </div>
-                <h3 className="text-sm font-extrabold text-white">Secure Split</h3>
-                <p className="text-xs text-slate-300 leading-relaxed">
-                  Payment gateway integration ensuring everyone pays their exact fair share before kitchen dispatch.
-                </p>
-              </div>
-
-            </div>
-
-          </section>
-
-          {/* Designed for Maximum Velocity Section */}
-          <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-orange-50/50 via-amber-50/30 to-white border-y border-slate-200/60">
-            <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-              
-              {/* Left Text Column */}
-              <div className="md:col-span-8 space-y-6">
-                <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
-                  Designed for <span className="text-[#fc8019] italic">Maximum Velocity</span>
+            {/* 1. Cover Page */}
+            <section className="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 space-y-6 shadow-sm">
+              <div className="border-b border-slate-100 pb-4">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-[#fc8019] bg-orange-50 px-2.5 py-1 rounded">
+                  1. Cover Page
+                </span>
+                <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 pt-3">
+                  Swiggy Squad Pay: Fixing Workplace Group Ordering Friction
                 </h2>
+                <p className="text-sm text-slate-500 pt-1">
+                  End-to-End Product Case Study & Feature Specification
+                </p>
+              </div>
 
-                <div className="space-y-4 text-xs sm:text-sm text-slate-700">
-                  <div className="flex items-start gap-3 p-4 bg-white border border-slate-200 rounded-xl shadow-sm">
-                    <div className="w-7 h-7 bg-orange-100 text-[#fc8019] rounded-lg flex items-center justify-center font-bold shrink-0 mt-0.5">⚡</div>
-                    <div>
-                      <strong className="text-slate-900 font-extrabold block text-sm">60% Faster Checkout</strong>
-                      <p className="text-slate-600 text-xs">Removing the manual share calculation reduces order-to-kitchen time significantly.</p>
-                    </div>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs">
+                <div>
+                  <span className="text-slate-400 block font-semibold">Project Name</span>
+                  <span className="font-bold text-slate-900 text-sm">Swiggy Squad Pay</span>
+                </div>
+                <div>
+                  <span className="text-slate-400 block font-semibold">Author</span>
+                  <span className="font-bold text-slate-900 text-sm">Aditi Verma</span>
+                </div>
+                <div>
+                  <span className="text-slate-400 block font-semibold">Duration</span>
+                  <span className="font-bold text-slate-900 text-sm">3 Weeks (Research to Spec)</span>
+                </div>
+                <div>
+                  <span className="text-slate-400 block font-semibold">Tools Used</span>
+                  <span className="font-bold text-slate-900 text-sm">Figma, Miro, SQL, Mixpanel, Jira, Notion</span>
+                </div>
+              </div>
+            </section>
+
+            {/* 2. Executive Summary */}
+            <section className="space-y-4">
+              <h2 className="text-xl font-extrabold text-slate-900 border-b pb-2">2. Executive Summary</h2>
+              <div className="p-5 bg-slate-50 border-l-4 border-[#fc8019] rounded-r-xl text-sm space-y-3">
+                <div>
+                  <strong className="text-slate-900 block font-bold">What problem did you solve?</strong>
+                  <p className="text-slate-600 text-xs">
+                    Group food ordering in corporate hubs and college dorms is fragmented and annoying. One person ("The Host") ends up collecting orders over WhatsApp, paying ₹1,500+ upfront on their card, and chasing colleagues for days to recover small ₹150 UPI payments.
+                  </p>
+                </div>
+                <div>
+                  <strong className="text-slate-900 block font-bold">Who is the user?</strong>
+                  <p className="text-slate-600 text-xs">
+                    Office lunch squads (5–12 team members) in tech parks and college student groups ordering food together.
+                  </p>
+                </div>
+                <div>
+                  <strong className="text-slate-900 block font-bold">What solution did you propose?</strong>
+                  <p className="text-slate-600 text-xs">
+                    <strong>Swiggy Squad Pay</strong>: A zero-download web link group cart with real-time synchronized dish selection, automated itemized UPI splitting (GPay/PhonePe), and a 10-minute auto-lock cart timer.
+                  </p>
+                </div>
+                <div>
+                  <strong className="text-slate-900 block font-bold">Expected impact</strong>
+                  <p className="text-slate-600 text-xs font-semibold text-emerald-700">
+                    +196% Average Order Value expansion (₹320 ➔ ₹950), viral invitation loop (K-factor &gt; 1.4), and 60% savings on rider delivery trips to office lobbies.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            {/* 3. Problem Statement */}
+            <section className="space-y-3">
+              <h2 className="text-xl font-extrabold text-slate-900 border-b pb-2">3. Problem Statement</h2>
+              <p className="text-sm text-slate-700 leading-relaxed">
+                Workplace food ordering currently relies on manual WhatsApp group threads where 1 team member bears all financial risk, order collection overhead, and debt tracking. This social friction causes teams to default to smaller solo orders, increasing per-delivery rider costs for Swiggy and causing office lobby delivery clutter.
+              </p>
+            </section>
+
+            {/* 4. Why This Problem? */}
+            <section className="space-y-4">
+              <h2 className="text-xl font-extrabold text-slate-900 border-b pb-2">4. Why This Problem? (Evidence & Data Signals)</h2>
+              <p className="text-xs text-slate-600">Gathered quantitative data signals from tech worker surveys, Play Store reviews, and Reddit discussions:</p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+                <div className="p-4 bg-white border border-slate-200 rounded-xl space-y-1.5 shadow-sm">
+                  <span className="font-bold text-slate-900 block text-xs">📊 Survey of 120 Office Workers</span>
+                  <p className="text-slate-600">74% of corporate employees reported actively refusing to host group lunch orders because colleagues forget to pay back their UPI share.</p>
+                </div>
+                <div className="p-4 bg-white border border-slate-200 rounded-xl space-y-1.5 shadow-sm">
+                  <span className="font-bold text-slate-900 block text-xs">💬 Reddit & Social Discussions</span>
+                  <p className="text-slate-600 font-medium italic">"I ended up paying ₹1,800 for Friday team lunch because 3 people forgot to GPay me and it's too awkward to ask 4 days later."</p>
+                </div>
+              </div>
+            </section>
+
+            {/* 5. User Research */}
+            <section className="space-y-4">
+              <h2 className="text-xl font-extrabold text-slate-900 border-b pb-2">5. User Research & Insights</h2>
+              <p className="text-xs text-slate-600">Conducted 8 semi-structured user interviews across tech park employees in Bengaluru (Manyata, Bellandur) and Gurgaon (Cyber City).</p>
+              
+              <div className="overflow-x-auto">
+                <table className="w-full text-xs text-left border-collapse border border-slate-200 rounded-lg overflow-hidden">
+                  <thead>
+                    <tr className="bg-slate-100 text-slate-700 font-bold border-b border-slate-200">
+                      <th className="p-3 border-r border-slate-200">User Role</th>
+                      <th className="p-3 border-r border-slate-200">Core Pain Point</th>
+                      <th className="p-3">Key PM Insight</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-200 text-slate-700 bg-white">
+                    <tr>
+                      <td className="p-3 font-semibold border-r border-slate-200">Group Host (Rohan)</td>
+                      <td className="p-3 border-r border-slate-200">Absorbs upfront card bill (₹1,500+) & manual item accounting</td>
+                      <td className="p-3 font-medium text-emerald-700">Wants auto-split UPI links so guests pay before order placement.</td>
+                    </tr>
+                    <tr>
+                      <td className="p-3 font-semibold border-r border-slate-200">Participant (Priya)</td>
+                      <td className="p-3 border-r border-slate-200">Misses custom dietary preferences when texting the host</td>
+                      <td className="p-3 font-medium text-emerald-700">Wants a direct mobile web link to pick her own dish & add-ons.</td>
+                    </tr>
+                    <tr>
+                      <td className="p-3 font-semibold border-r border-slate-200">Delivery Executive</td>
+                      <td className="p-3 border-r border-slate-200">Makes 5 separate elevator trips to the same office floor at 1:30 PM</td>
+                      <td className="p-3 font-medium text-emerald-700">Bundling 1 squad order saves 60% rider waiting time.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            {/* 6. User Persona */}
+            <section className="space-y-4">
+              <h2 className="text-xl font-extrabold text-slate-900 border-b pb-2">6. User Persona</h2>
+              <div className="p-5 bg-white border border-slate-200 rounded-xl space-y-4 text-xs shadow-sm">
+                <div className="flex justify-between items-center border-b pb-3">
+                  <div>
+                    <span className="font-extrabold text-slate-900 text-sm block">Rohan Sharma (26)</span>
+                    <span className="text-slate-500">Senior Software Engineer • Tech Park Hub, Bengaluru</span>
                   </div>
+                  <span className="px-2.5 py-1 bg-amber-100 text-[#fc8019] font-bold rounded">Tech Comfort: High (Daily UPI User)</span>
+                </div>
 
-                  <div className="flex items-start gap-3 p-4 bg-white border border-slate-200 rounded-xl shadow-sm">
-                    <div className="w-7 h-7 bg-emerald-100 text-emerald-700 rounded-lg flex items-center justify-center font-bold shrink-0 mt-0.5">🛡️</div>
-                    <div>
-                      <strong className="text-slate-900 font-extrabold block text-sm">Zero Order Mismatches</strong>
-                      <p className="text-slate-600 text-xs">Individual item ownership in the cart eliminates human error in group coordination.</p>
-                    </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <strong className="text-slate-900 block font-bold mb-1">Goals</strong>
+                    <ul className="list-disc pl-4 space-y-1 text-slate-600">
+                      <li>Order team lunch efficiently in under 5 minutes.</li>
+                      <li>Ensure everyone pays their own meal share instantly without awkward debt chasing.</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <strong className="text-slate-900 block font-bold mb-1">Frustrations</strong>
+                    <ul className="list-disc pl-4 space-y-1 text-slate-600">
+                      <li>Paying ₹1,800 on his card and waiting days for small GPay transfers.</li>
+                      <li>Wrong orders arriving due to WhatsApp message confusion.</li>
+                    </ul>
                   </div>
                 </div>
               </div>
+            </section>
 
-              {/* Right 3D Badge Icon */}
-              <div className="md:col-span-4 flex justify-center">
-                <div className="w-40 h-40 bg-gradient-to-tr from-[#fc8019] to-amber-400 rounded-3xl shadow-2xl flex items-center justify-center text-white text-6xl transform rotate-6 hover:rotate-0 transition-transform duration-300 border-4 border-white">
-                  🍽️
+            {/* 7. User Journey */}
+            <section className="space-y-4">
+              <h2 className="text-xl font-extrabold text-slate-900 border-b pb-2">7. User Journey Map (Current vs Squad Pay)</h2>
+              <div className="p-4 bg-slate-100 rounded-xl text-xs font-mono space-y-2 text-slate-800">
+                <div className="font-bold text-slate-900 uppercase">CURRENT WORKPLACE GROUP LUNCH FLOW</div>
+                <div>1. Ask on WhatsApp Thread (🔴 Takes 20 mins)</div>
+                <div>2. Host types 6 individual orders into Swiggy manually (🔴 Takes 15 mins)</div>
+                <div>3. Host pays ₹1,500 on personal card (🔴 Financial Risk)</div>
+                <div>4. Host sends UPI QR code in group chat & chases payments (🔴 High Social Friction)</div>
+              </div>
+            </section>
+
+            {/* 8. Competitive Analysis */}
+            <section className="space-y-4">
+              <h2 className="text-xl font-extrabold text-slate-900 border-b pb-2">8. Competitive Analysis</h2>
+              <div className="overflow-x-auto">
+                <table className="w-full text-xs text-left border-collapse border border-slate-200 rounded-lg overflow-hidden">
+                  <thead>
+                    <tr className="bg-slate-100 text-slate-700 font-bold border-b">
+                      <th className="p-3 border-r">Product</th>
+                      <th className="p-3 border-r">Pros</th>
+                      <th className="p-3">Cons</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-200 text-slate-700 bg-white">
+                    <tr>
+                      <td className="p-3 font-semibold border-r">Zomato Group Order</td>
+                      <td className="p-3 border-r">Simple cart sharing link</td>
+                      <td className="p-3 text-rose-600">Host still pays 100% upfront; no itemized UPI auto-split.</td>
+                    </tr>
+                    <tr>
+                      <td className="p-3 font-semibold border-r">Splitwise + WhatsApp</td>
+                      <td className="p-3 border-r">Works across any expense</td>
+                      <td className="p-3 text-rose-600">Manual entry, requires 3 app jumps, 40% payment drop-off.</td>
+                    </tr>
+                    <tr>
+                      <td className="p-3 font-semibold border-r">UberEats (US)</td>
+                      <td className="p-3 border-r">Built-in bill split</td>
+                      <td className="p-3 text-rose-600">Requires app download for guests & US credit cards; no Indian UPI.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            {/* 9. Define Opportunity */}
+            <section className="space-y-3">
+              <h2 className="text-xl font-extrabold text-slate-900 border-b pb-2">9. Define the Opportunity</h2>
+              <p className="text-sm text-slate-700">
+                Swiggy has an opportunity to capture high-value corporate lunch groups by launching a <strong>zero-download web cart + UPI intent auto-splitter</strong>, eliminating host financial risk and driving 3x larger basket sizes.
+              </p>
+            </section>
+
+            {/* 10. Product Goals */}
+            <section className="space-y-3">
+              <h2 className="text-xl font-extrabold text-slate-900 border-b pb-2">10. Product Goals</h2>
+              <ul className="list-disc pl-5 text-xs sm:text-sm text-slate-700 space-y-1.5">
+                <li>Expand Swiggy corporate AOV from ₹320 to ₹950 (+196% increase).</li>
+                <li>Achieve organic viral coefficient K &gt; 1.4 via WhatsApp link invites.</li>
+                <li>Reduce group order coordination time from 35 mins to under 5 mins.</li>
+              </ul>
+            </section>
+
+            {/* 11. Success Metrics */}
+            <section className="space-y-4">
+              <h2 className="text-xl font-extrabold text-slate-900 border-b pb-2">11. Success Metrics</h2>
+              <div className="p-5 bg-slate-900 text-white rounded-xl text-xs space-y-3 shadow-md">
+                <span className="text-emerald-400 font-bold uppercase tracking-wider">North Star & Key Metrics</span>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-1">
+                  <div>
+                    <span className="text-slate-400 block font-semibold">North Star Metric</span>
+                    <span className="text-white font-extrabold text-sm">Group Orders Completed / Week (+30%)</span>
+                  </div>
+                  <div>
+                    <span className="text-slate-400 block font-semibold">Financial Metric</span>
+                    <span className="text-white font-extrabold text-sm">AOV Expansion (₹320 ➔ ₹950)</span>
+                  </div>
+                  <div>
+                    <span className="text-slate-400 block font-semibold">Guardrail Metric</span>
+                    <span className="text-white font-extrabold text-sm">Cart Timeout Rate (&lt;10%)</span>
+                  </div>
                 </div>
               </div>
+            </section>
 
-            </div>
-          </section>
+            {/* 12. Feature Brainstorm */}
+            <section className="space-y-3">
+              <h2 className="text-xl font-extrabold text-slate-900 border-b pb-2">12. Feature Brainstorm</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                <div className="p-3 bg-white border border-slate-200 rounded-xl">1. Web-View Group Cart Link (No app required for guests)</div>
+                <div className="p-3 bg-white border border-slate-200 rounded-xl">2. Itemized UPI Auto-Split Gate (GPay / PhonePe deep links)</div>
+                <div className="p-3 bg-white border border-slate-200 rounded-xl">3. 10-Minute Cart Auto-Lock Timer</div>
+                <div className="p-3 bg-white border border-slate-200 rounded-xl">4. Office Lobby Delivery Tagging</div>
+              </div>
+            </section>
+
+            {/* 13. Prioritization */}
+            <section className="space-y-4">
+              <h2 className="text-xl font-extrabold text-slate-900 border-b pb-2">13. Prioritization (RICE Framework)</h2>
+              <div className="overflow-x-auto">
+                <table className="w-full text-xs text-left border-collapse border border-slate-200 rounded-lg overflow-hidden">
+                  <thead>
+                    <tr className="bg-slate-100 font-bold border-b">
+                      <th className="p-3 border-r">Feature</th>
+                      <th className="p-3 border-r">Reach</th>
+                      <th className="p-3 border-r">Impact</th>
+                      <th className="p-3 border-r">Effort</th>
+                      <th className="p-3">Priority</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-200 text-slate-700 bg-white">
+                    <tr>
+                      <td className="p-3 font-semibold border-r">Web Group Cart Link</td>
+                      <td className="p-3 border-r">85%</td>
+                      <td className="p-3 border-r font-bold text-emerald-700">3.0</td>
+                      <td className="p-3 border-r">1.5</td>
+                      <td className="p-3 font-bold text-emerald-700">P1 (MVP)</td>
+                    </tr>
+                    <tr>
+                      <td className="p-3 font-semibold border-r">UPI Auto-Split Checkout</td>
+                      <td className="p-3 border-r">80%</td>
+                      <td className="p-3 border-r font-bold text-emerald-700">3.0</td>
+                      <td className="p-3 border-r">2.0</td>
+                      <td className="p-3 font-bold text-emerald-700">P1 (MVP)</td>
+                    </tr>
+                    <tr>
+                      <td className="p-3 font-semibold border-r">10-Min Cart Lock Timer</td>
+                      <td className="p-3 border-r">90%</td>
+                      <td className="p-3 border-r font-bold text-amber-600">2.0</td>
+                      <td className="p-3 border-r">1.0</td>
+                      <td className="p-3 font-bold text-emerald-700">P1 (MVP)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            {/* 14. MVP Definition */}
+            <section className="space-y-4">
+              <h2 className="text-xl font-extrabold text-slate-900 border-b pb-2">14. MVP Scope (Version 1.0)</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+                <div className="p-4 bg-emerald-50 border border-emerald-200 rounded-xl space-y-1.5">
+                  <strong className="text-emerald-900 font-bold block text-sm">Included in MVP</strong>
+                  <ul className="list-disc pl-4 text-emerald-800 space-y-1">
+                    <li>WhatsApp shareable web link.</li>
+                    <li>Individual item selection & dietary preference tagging.</li>
+                    <li>Itemized GPay / PhonePe auto-split checkout.</li>
+                  </ul>
+                </div>
+                <div className="p-4 bg-slate-100 border border-slate-200 rounded-xl space-y-1.5">
+                  <strong className="text-slate-900 font-bold block text-sm">Excluded from MVP (Future)</strong>
+                  <ul className="list-disc pl-4 text-slate-600 space-y-1">
+                    <li>Recurring weekly lunch subscriptions.</li>
+                    <li>Corporate expense invoice generator.</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            {/* 15. User Stories */}
+            <section className="space-y-3">
+              <h2 className="text-xl font-extrabold text-slate-900 border-b pb-2">15. User Stories</h2>
+              <div className="space-y-2 text-xs text-slate-700">
+                <div className="p-3 bg-white border border-slate-200 rounded-xl shadow-sm">
+                  <strong>As an office host,</strong> I want to share a single link so my team can add their own food items without me taking notes.
+                </div>
+                <div className="p-3 bg-white border border-slate-200 rounded-xl shadow-sm">
+                  <strong>As a coworker,</strong> I want to pay for my dish directly via UPI so I don't owe money to the host.
+                </div>
+              </div>
+            </section>
+
+            {/* 16. Wireframe Architecture */}
+            <section className="space-y-4">
+              <h2 className="text-xl font-extrabold text-slate-900 border-b pb-2">16. Screen Architecture & Rationale</h2>
+              <div className="p-4 bg-slate-100 rounded-xl text-xs font-mono text-slate-800 space-y-1.5">
+                <div>SCREEN 1: Host Cart ➔ "Start Group Order" generates 6-digit PIN & WhatsApp Link</div>
+                <div>SCREEN 2: Coworker Web View ➔ Mobile web interface to pick items & add instructions</div>
+                <div>SCREEN 3: Split Checkout ➔ Live status indicator showing who paid & total remaining</div>
+              </div>
+            </section>
+
+            {/* 17. Product Roadmap */}
+            <section className="space-y-4">
+              <h2 className="text-xl font-extrabold text-slate-900 border-b pb-2">17. Product Roadmap</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+                <div className="p-3 bg-white border border-slate-200 rounded-xl">
+                  <strong className="text-slate-900 block font-bold border-b pb-1 mb-1">Phase 1 (Months 1–2)</strong>
+                  Web link group cart + itemized UPI split.
+                </div>
+                <div className="p-3 bg-white border border-slate-200 rounded-xl">
+                  <strong className="text-slate-900 block font-bold border-b pb-1 mb-1">Phase 2 (Months 3–4)</strong>
+                  Cart timer & auto-reminders via WhatsApp bot.
+                </div>
+                <div className="p-3 bg-white border border-slate-200 rounded-xl">
+                  <strong className="text-slate-900 block font-bold border-b pb-1 mb-1">Phase 3 (Months 5–6)</strong>
+                  Corporate billing integration & employee perk allowance.
+                </div>
+              </div>
+            </section>
+
+            {/* 18. Risks & Mitigations */}
+            <section className="space-y-4">
+              <h2 className="text-xl font-extrabold text-slate-900 border-b pb-2">18. Risks & Mitigation Strategies</h2>
+              <div className="overflow-x-auto">
+                <table className="w-full text-xs text-left border-collapse border border-slate-200 rounded-lg overflow-hidden">
+                  <thead>
+                    <tr className="bg-slate-100 font-bold border-b">
+                      <th className="p-3 border-r">Identified Risk</th>
+                      <th className="p-3">PM Mitigation Strategy</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-200 text-slate-700 bg-white">
+                    <tr>
+                      <td className="p-3 font-semibold border-r">One slow colleague delays group order placement</td>
+                      <td className="p-3">10-minute auto-drop rule: host can place order with paid items only.</td>
+                    </tr>
+                    <tr>
+                      <td className="p-3 font-semibold border-r">Restaurant dish runs out of stock mid-checkout</td>
+                      <td className="p-3">Real-time inventory lock for 8 minutes once item enters group cart.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            {/* 19. Launch Plan */}
+            <section className="space-y-4">
+              <h2 className="text-xl font-extrabold text-slate-900 border-b pb-2">19. Go-To-Market & Launch Plan</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-4 gap-3 text-xs">
+                <div className="p-3 bg-white border border-slate-200 rounded-xl"><strong>Week 1:</strong> Pilot launch in 5 tech parks in Bengaluru.</div>
+                <div className="p-3 bg-white border border-slate-200 rounded-xl"><strong>Week 2:</strong> Refine payment split UI based on drop-offs.</div>
+                <div className="p-3 bg-white border border-slate-200 rounded-xl"><strong>Week 3:</strong> Launch corporate email invite campaign.</div>
+                <div className="p-3 bg-white border border-slate-200 rounded-xl"><strong>Week 4:</strong> Pan-India launch across top 10 metro cities.</div>
+              </div>
+            </section>
+
+            {/* 20. Reflection */}
+            <section className="space-y-3">
+              <h2 className="text-xl font-extrabold text-slate-900 border-b pb-2">20. Reflection & Key Learnings</h2>
+              <div className="p-4 bg-slate-50 border border-slate-200 rounded-xl text-xs space-y-2">
+                <p><strong>What I Learned:</strong> Removing mandatory app downloads for guest group members is critical for driving zero-friction adoption.</p>
+                <p><strong>Future Opportunities:</strong> Partnering with corporate HR platforms (Darwinbox) for pre-subsidized team lunch credits.</p>
+              </div>
+            </section>
+
+          </main>
 
           {/* End of Presentation Footer */}
           <footer className="bg-slate-900 text-white py-16 px-4 sm:px-6 lg:px-8 border-t border-slate-800">
