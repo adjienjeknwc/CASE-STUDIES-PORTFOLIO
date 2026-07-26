@@ -1,0 +1,31 @@
+I have fully integrated the **Dermalink Case Study** along with both visual diagrams into your portfolio!
+
+---
+
+### 🌿 Dermalink — Intelligent Multimodal Skincare Auditor
+- **📌 Quick Facts Table**: Product, Role (Product Analyst Retrospective), Core Tech (React 19, Gemini 2.5 Flash), Data Used (Synthetic Dataset), & Status.
+- **1. Executive Summary**: Selfie to tri-zone diagnosis, personalized routine builder across 3 budget tiers.
+- **2. Market Opportunity**: $26.6B personalized skincare market in 2026 (7.3% CAGR) expanding to $97B by 2030, brand-agnostic comparison wedge vs. DTC brands like Curology.
+- **3. The Problem**: Diagnostic friction (skin type by zone) & purchase-decision friction (drugstore vs. clinical price comparison).
+- **4. Target Users & Personas Table**: "Budget-Conscious Beginner", "The Optimizer", and "Gift/Household Shopper".
+- **5. Competitive Landscape Table**: Comparison against Curology, Function of Beauty, Proven, and Atolla.
+- **6. Key Features & Diagrams**:
+  - 🔒 **Client-Side Biometric Privacy Mask**: Local in-browser eye redaction before Base64 API transmission (BIPA & GDPR compliance).
+  - 🗺️ **Tri-Zone Facial Mapping Diagram**: Embedded `/dermalink_zone_map.png` mapping T-Zone (Forehead/Nose), Cheeks (Malar region), and U-Zone (Chin/Jawline).
+  - 📊 **Tiered Routine Cost Calculator**: Budget ($), Balanced ($$), & Premium ($$$) with live totals.
+- **7. User Flow**: Step-by-step 7-stage flow.
+- **8. Business Model & Monetization**: Affiliate commerce, freemium tracking, B2B clinic licensing, & direct DTC subscription comparison.
+- **9. Technical Architecture**: Architecture pipeline diagram & client-heavy API key exposure risk flag.
+- **10. Privacy, Trust & Compliance**: Biometric classification, "clinical-grade" copy adjustment recommendations, & data retention policy.
+- **11. PM User Stories**: 4 backlog artifacts written from a BA/PM perspective.
+- **12. Validating the Idea & Dashboard**: Embedded `/dermalink_metrics.png` (Simulated Metrics Dashboard: 71% Scan-to-routine, 3.4 Toggles/session, 22% Redaction click-through, 18% 7-day return).
+- **13. Risks & Assumptions Matrix**: API key exposure, clinical framing, & AI misclassification mitigations.
+- **14. Product Roadmap Table**: P0 (Backend API proxy & explicit privacy consent), P1 (Progress tracking over time), P2 (Dermatologist-reviewed validation study).
+- **15. Key Takeaways**: Summary bullet points.
+
+---
+
+### Live & Ready to Review
+Your dev server is auto-updated and live at **[http://localhost:5174/](http://localhost:5174/)**!
+
+Would you like to review any other case study, make design tweaks, or deploy live to production (`vercel --prod`)?

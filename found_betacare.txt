@@ -1,0 +1,517 @@
+Created At: 2026-07-21T21:10:27Z
+Completed At: 2026-07-21T21:10:28Z
+File Path: `file:///Users/aditi/Documents/AGENT%20PORTAL%20copy%202/frontend/src/pages/KYCDocumentVerification.jsx`
+Total Lines: 509
+Total Bytes: 32947
+Showing lines 1 to 509
+The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+1: // src/pages/KYCDocumentVerification.jsx
+2: import React, { useState, useMemo, useEffect } from 'react';
+3: import { useNavigate, useLocation } from 'react-router-dom';
+4: import { useLeads } from '../context/LeadContext'; // Context engine binding
+5: import { 
+6:   ArrowLeft, ArrowRight, Save, CheckCircle2, FileText, Activity, Download, 
+7:   Send, MessageSquare, Shield, Layers, User, Check, AlertTriangle, Upload, HelpCircle,
+8:   ShieldCheck 
+9: } from 'lucide-react';
+10: 
+11: export default function KYCDocumentVerification() {
+12:   const navigate = useNavigate();
+13:   const location = useLocation();
+14:   const { masterLeadsData } = useLeads();
+15:   
+16:   const [toastMessage, setToastMessage] = useState('');
+17:   const [kycNotes, setKycNotes] = useState('');
+18:   const [savedNotesList, setSavedNotesList] = useState([]);
+19: 
+20:   // ==========================================================================
+21:   // BACKEND REPOSITORY DATA RESOLVER Matrix
+22:   // Pulls state inputs from navigation first, or syncs with the active ledger array
+23:   // ==========================================================================
+24:   const incomingLeadData = useMemo(() => {
+25:     if (location.state?.leadData || location.state?.activeLead || location.state?.lead) {
+26:       return location.state?.leadData || location.state?.activeLead || location.state?.lead;
+27:     }
+28:     if (masterLeadsData && masterLeadsData.length > 0) {
+29:       return masterLeadsData[0];
+30:     }
+31:     return null;
+32:   }, [location.state, masterLeadsData]);
+33: 
+34:   // Unified UI States loaded directly from the backend context payload fields
+35:   const [customerName, setCustomerName] = useState(incomingLeadData?.customerName || incomingLeadData?.fullName || incomingLeadData?.name || 'Rahul Sharma');
+36:   const [bankDetails, setBankDetails] = useState({
+37:     holderName: incomingLeadData?.customerName || incomingLeadData?.fullName || incomingLeadData?.name || 'Rahul Sharma',
+38:     bankName: 'HDFC Bank Ltd',
+39:     accountNumber: '50100421298451',
+40:     ifscCode: 'HDFC0000060'
+41:   });
+42: 
+43:   // Caches persistent parameters directly to avoid hardcoded static variables
+44:   useEffect(() => {
+45:     if (incomingLeadData) {
+46:       const resolvedName = incomingLeadData.customerName || incomingLeadData.fullName || incomingLeadData.name || 'Rahul Sharma';
+47:       setCustomerName(resolvedName);
+48:       setBankDetails(prev => ({
+49:         ...prev,
+50:         holderName: resolvedName
+51:       }));
+52:     }
+53:   }, [incomingLeadData]);
+54: 
+55:   // ==========================================================================
+56:   // DYNAMIC PROPOSAL SNAPSHOT ENGINE
+57:   // Automatically computes coverage limits and schemas based on prior steps
+58:   // ==========================================================================
+59:   const proposalSnapshot = useMemo(() => {
+60:     const rawCoverage = parseFloat(incomingLeadData?.coverageAmount);
+61:     let coverageText = '₹2.85 Crore';
+62:     if (!isNaN(rawCoverage)) {
+63:       if (rawCoverage >= 10000000) {
+64:         coverageText = `₹${(rawCoverage / 10000000).toFixed(2)} Crore`;
+65:       } else {
+66:         coverageText = `₹${(rawCoverage / 100000).toFixed(2)} Lakh`;
+67:       }
+68:     }
+69: 
+70:     return {
+71:       proposalNumber: incomingLeadData?.id || 'PR-987654',
+72:       customerName: customerName,
+73:       insurer: incomingLeadData?.interest ? `Betacare Life [${incomingLeadData.interest}]` : 'Betacare Life [Term Life]',
+74:       productName: incomingLeadData?.interest || 'Term Life Plan',
+75:       coverAmount: coverageText,
+76:       premiumAmount: '₹23,840' // Synchronized premium calculator target base
+77:     };
+78:   }, [incomingLeadData, customerName]);
+79: 
+80:   // SIMULATING LIVE INTERACTIVE FILE UPLOADS WITH LOCAL BUFFERS
+81:   const [documentsState, setDocumentsState] = useState({
+82:     panCard: null,
+83:     aadhaarCard: null,
+84:     passport: null,
+85:     drivingLicense: null,
+86:     aadhaarAddress: null,
+87:     utilityBill: null,
+88:     bankStatement: null,
+89:     rentalAgreement: null,
+90:     salarySlips: null,
+91:     form16: null,
+92:     itrDoc: null,
+93:     bankStatementFinancial: null,
+94:     customerPhoto: null,
+95:     cancelledCheque: null
+96:   });
+97: 
+98:   const simulateDocumentUpload = (key) => {
+99:     setDocumentsState(prev => ({
+100:       ...prev,
+101:       [key]: `DOC_SCAN_${key.toUpperCase()}_SIGNED.pdf`
+102:     }));
+103:     triggerToast(`Success: ${key.replace(/([A-Z])/g, ' $1')} uploaded successfully.`);
+104:   };
+105: 
+106:   const triggerToast = (msg) => {
+107:     setToastMessage(msg);
+108:     setTimeout(() => setToastMessage(''), 3000);
+109:   };
+110: 
+111:   // ADVANCED RULES ENGINE EVALUATING AUDIT METRICS
+112:   const kycMetrics = useMemo(() => {
+113:     const mandatoryKeys = ['panCard', 'aadhaarCard', 'aadhaarAddress', 'salarySlips', 'form16', 'itrDoc', 'customerPhoto', 'cancelledCheque'];
+114:     let verifiedMandatoryCount = 0;
+115:     mandatoryKeys.forEach(k => {
+116:       if (documentsState[k]) verifiedMandatoryCount++;
+117:     });
+118: 
+119:     return {
+120:       completionPercentage: Math.round((verifiedMandatoryCount / mandatoryKeys.length) * 100),
+121:       isProceedEligible: verifiedMandatoryCount === mandatoryKeys.length
+122:     };
+123:   }, [documentsState]);
+124: 
+125:   const handleAppendKycNote = (e) => {
+126:     e.preventDefault();
+127:     if (!kycNotes.trim()) return;
+128:     setSavedNotesList(prev => [kycNotes, ...prev]);
+129:     setKycNotes('');
+130:     triggerToast('Note successfully committed to KYC audit ledger.');
+131:   };
+132: 
+133:   const handleCompleteKYCPipeline = async () => {
+134:     if (!kycMetrics.isProceedEligible) {
+135:       triggerToast('Validation Error: Please upload all required identity, financial and bank documents.');
+136:       return;
+137:     }
+138:     
+139:     try {
+140:       const token = localStorage.getItem('agent_token');
+141:       const payload = {
+142:         leadId: incomingLeadData?._id || incomingLeadData?.id,
+143:         customerName: proposalSnapshot.customerName,
+144:         planName: proposalSnapshot.productName,
+145:         sumAssured: incomingLeadData?.coverageAmount || 28500000,
+146:         premium: 23840,
+147:         kycDocuments: documentsState
+148:       };
+149:       
+150:       const res = await fetch('/api/underwriting', {
+151:         method: 'POST',
+152:         headers: {
+153:           'Content-Type': 'application/json',
+154:           'Authorization': `Bearer ${token}`,
+155:           'x-agent-role': localStorage.getItem('agent_role') || 'Sales Agent'
+156:         },
+157:         body: JSON.stringify(payload)
+158:       });
+159:       
+160:       const data = await res.json();
+161:       
+162:       if (!res.ok || !data.success) {
+163:         throw new Error(data.message || 'Failed to submit proposal to underwriting.');
+164:       }
+165:       
+166:       triggerToast('KYC verified & Proposal submitted to Underwriting Case queue successfully.');
+167:       setTimeout(() => {
+168:         navigate('/policies/underwriting');
+169:       }, 1500);
+170:     } catch (err) {
+171:       console.error(err);
+172:       triggerToast(`Fulfillment Failure: ${err.message}`);
+173:     }
+174:   };
+175: 
+176:   return (
+177:     <div className="flex-1 flex flex-col min-h-screen bg-[#F5F7FB] text-left font-sans antialiased pb-16 w-full max-w-full relative">
+178:       
+179:       {/* GLOBAL TOAST POPUP NOTIFIER */}
+180:       {toastMessage && (
+181:         <div className="fixed top-6 right-6 bg-[#0B1F5B] text-white text-xs font-bold px-4 py-3 rounded-xl shadow-2xl z-50 border border-blue-900 flex items-center gap-2 flex-wrap">
+182:           <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+183:           <span>{toastMessage}</span>
+184:         </div>
+185:       )}
+186: 
+187:       {/* HEADER PANELS WITH COMPLETE MOBILE OVERLAPPING CORRECTIONS */}
+188:       <header className="bg-white border-b border-slate-200 px-6 py-4 sticky top-0 z-40 shadow-3xs w-full flex flex-col md:flex-row md:items-center justify-between gap-4">
+189:         <div className="flex items-center gap-4 min-w-0 w-full">
+190:           <button type="button" onClick={() => navigate('/lead-management')} className="p-2 border border-slate-200 rounded-xl bg-white text-slate-500 hover:bg-slate-50 shrink-0">
+191:             <ArrowLeft className="w-4 h-4" />
+192:           </button>
+193:           <div className="min-w-0 flex-1">
+194:             <h1 className="font-black text-[#0B1F5B] tracking-tight text-xl md:text-[22px] leading-none truncate">Step 10 — KYC & Document Verification</h1>
+195:             <p className="text-slate-400 font-bold text-[10px] uppercase tracking-wider mt-1.5 whitespace-normal leading-relaxed">
+196:               Verify customer identity, financial eligibility and regulatory compliance parameters before processing.
+197:             </p>
+198:           </div>
+199:         </div>
+200:       </header>
+201: 
+202:       {/* COMPREHENSIVE COMPONENT CANVAS CONTAINER GRID */}
+203:       <main className="flex-1 max-w-[1450px] w-full mx-auto px-6 py-5 grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+204:         
+205:         {/* LEFT COMPARTMENT FORM SPREADSHEETS */}
+206:         <div className="lg:col-span-8 bg-white border border-slate-200 rounded-2xl p-5 md:p-6 shadow-sm space-y-6 min-w-0">
+207:           
+208:           {/* SECTION 1 — SYSTEM HUD LOG TRACK DETAILS CHIP */}
+209:           <div className="border border-slate-100 bg-slate-50/50 p-4 rounded-xl space-y-4 select-none">
+210:             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 text-xs font-semibold">
+211:               <div className="min-w-0"><span className="text-slate-400 text-[9px] uppercase tracking-wider block font-black">Proposal Reference Code</span><span className="text-slate-900 font-mono font-bold text-sm block mt-0.5 select-all">{proposalSnapshot.proposalNumber}</span></div>
+212:               <div className="min-w-0 flex-1 sm:px-4"><span className="text-slate-400 text-[9px] uppercase tracking-wider block font-black">Fulfillment Product Scheme</span><span className="text-[#0B1F5B] font-black text-sm block mt-0.5 truncate max-w-[340px]" title={proposalSnapshot.insurer}>{proposalSnapshot.insurer}</span></div>
+213:               <div className="sm:text-right shrink-0"><span className="text-slate-400 text-[9px] uppercase tracking-wider block font-black">KYC Status Tag</span><span className="text-indigo-700 font-extrabold uppercase text-[10px] tracking-wide mt-1 block">In Progress</span></div>
+214:             </div>
+215:             
+216:             <div className="space-y-1 pt-1">
+217:               <div className="flex justify-between text-[10px] font-black uppercase text-[#0B1F5B] tracking-wider">
+218:                 <span>Verification Completion</span>
+219:                 <span>{kycMetrics.completionPercentage}%</span>
+220:               </div>
+221:               <div className="w-full bg-slate-200 h-2 rounded-full overflow-hidden border">
+222:                 <div className="bg-[#0B1F5B] h-full transition-all duration-300" style={{ width: `${kycMetrics.completionPercentage}%` }}></div>
+223:               </div>
+224:             </div>
+225:           </div>
+226: 
+227:           {/* SECTION 2 — IDENTITY MATRIX SECTION TABLE */}
+228:           <div className="space-y-2">
+229:             <span className="text-[10px] font-black uppercase text-[#0B1F5B] tracking-widest block border-b border-slate-100 pb-1.5 select-none">Section 2 — Identity Verification Matrix</span>
+230:             <div className="border border-slate-200 rounded-xl overflow-hidden bg-white shadow-3xs w-full">
+231:               <table className="hidden sm:table w-full text-xs text-left text-slate-600 border-collapse">
+232:                 <thead>
+233:                   <tr className="bg-slate-50 font-black text-[9px] text-slate-400 uppercase border-b tracking-wider select-none">
+234:                     <th className="p-2.5 pl-4 w-[40%]">Document Type Required</th>
+235:                     <th className="p-2.5 w-[35%]">Verification Status Track</th>
+236:                     <th className="p-2.5 text-center w-[25%]">Action Channels</th>
+237:                   </tr>
+238:                 </thead>
+239:                 <tbody className="divide-y divide-slate-100 font-semibold text-[11px]">
+240:                   {[
+241:                     { key: 'panCard', label: 'PAN Card Proof', req: true },
+242:                     { key: 'aadhaarCard', label: 'Aadhaar Card Proof', req: true },
+243:                     { key: 'passport', label: 'Passport Scan', req: false },
+244:                     { key: 'drivingLicense', label: 'Driving License Scan', req: false }
+245:                   ].map((doc) => (
+246:                     <tr key={doc.key} className="hover:bg-slate-50/40">
+247:                       <td className="p-2.5 pl-4 text-slate-900 font-bold">{doc.label} {doc.req && <span className="text-rose-500 font-black">*</span>}</td>
+248:                       <td className="p-2.5">
+249:                         {documentsState[doc.key] ? (
+250:                           <span className="text-emerald-700 font-extrabold flex items-center gap-1"><Check className="w-3.5 h-3.5 text-emerald-500 shrink-0" /> ✓ Uploaded</span>
+251:                         ) : (
+252:                           <span className={`text-[10px] uppercase font-black tracking-wide ${doc.req ? 'text-amber-600' : 'text-slate-400 font-medium'}`}>{doc.req ? 'Pending Upload' : 'Optional Slot'}</span>
+253:                         )}
+254:                       </td>
+255:                       <td className="p-2.5 text-center">
+256:                         <button type="button" onClick={() => simulateDocumentUpload(doc.key)} className="h-7 px-3 border bg-white rounded-lg font-bold text-slate-700 hover:bg-slate-50 flex items-center gap-1 mx-auto select-none"><Upload className="w-3 h-3 text-slate-400" /><span>Upload</span></button>
+257:                       </td>
+258:                     </tr>
+259:                   ))}
+260:                 </tbody>
+261:               </table>
+262: 
+263:               {/* MOBILE STACKED CARDS VIEW */}
+264:               <div className="sm:hidden divide-y divide-slate-100 bg-white">
+265:                 {[
+266:                   { key: 'panCard', label: 'PAN Card Proof', req: true },
+267:                   { key: 'aadhaarCard', label: 'Aadhaar Card Proof', req: true },
+268:                   { key: 'passport', label: 'Passport Scan', req: false },
+269:                   { key: 'drivingLicense', label: 'Driving License Scan', req: false }
+270:                 ].map((doc) => (
+271:                   <div key={doc.key} className="p-3.5 flex flex-col gap-2">
+272:                     <div className="flex justify-between items-start">
+273:                       <span className="text-slate-950 font-bold text-xs">{doc.label} {doc.req && <span className="text-rose-500 font-black">*</span>}</span>
+274:                       {documentsState[doc.key] ? (
+275:                         <span className="text-emerald-750 font-black text-[10px] flex items-center gap-0.5"><Check className="w-3 h-3 text-emerald-500 shrink-0" /> Uploaded</span>
+276:                       ) : (
+277:                         <span className={`text-[9px] font-black uppercase ${doc.req ? 'text-amber-600' : 'text-slate-400 font-medium'}`}>{doc.req ? 'Pending' : 'Optional'}</span>
+278:                       )}
+279:                     </div>
+280:                     <button type="button" onClick={() => simulateDocumentUpload(doc.key)} className="w-full h-8 border bg-white rounded-xl font-bold text-[11px] text-slate-700 hover:bg-slate-50 flex items-center justify-center gap-1.5"><Upload className="w-3.5 h-3.5 text-slate-400" /><span>Upload</span></button>
+281:                   </div>
+282:                 ))}
+283:               </div>
+284:             </div>
+285:           </div>
+286: 
+287:           {/* SECTION 3 — ADDRESS MATRIX SECTION TABLE */}
+288:           <div className="space-y-2">
+289:             <span className="text-[10px] font-black uppercase text-[#0B1F5B] tracking-widest block border-b border-slate-100 pb-1.5 select-none">Section 3 — Address Verification Matrix</span>
+290:             <div className="border border-slate-200 rounded-xl overflow-hidden bg-white shadow-3xs w-full">
+291:               <table className="hidden sm:table w-full text-xs text-left text-slate-600 border-collapse">
+292:                 <thead>
+293:                   <tr className="bg-slate-50 font-black text-[9px] text-slate-400 uppercase border-b tracking-wider select-none">
+294:                     <th className="p-2.5 pl-4 w-[40%]">Document Type</th>
+295:                     <th className="p-2.5 w-[35%]">Status</th>
+296:                     <th className="p-2.5 text-center w-[25%]">Action</th>
+297:                   </tr>
+298:                 </thead>
+299:                 <tbody className="divide-y divide-slate-100 font-semibold text-[11px]">
+300:                   {[
+301:                     { key: 'aadhaarAddress', label: 'Aadhaar Address Print Match', req: true },
+302:                     { key: 'utilityBill', label: 'Utility Electricity Bill Scan', req: false },
+303:                     { key: 'bankStatement', label: 'Bank Statement / Passbook page', req: false },
+304:                     { key: 'rentalAgreement', label: 'Registered Rental Agreement', req: false }
+305:                   ].map((doc) => (
+306:                     <tr key={doc.key} className="hover:bg-slate-50/40">
+307:                       <td className="p-2.5 pl-4 text-slate-900 font-bold">{doc.label} {doc.req && <span className="text-rose-500 font-black">*</span>}</td>
+308:                       <td className="p-2.5">
+309:                         {documentsState[doc.key] ? (
+310:                           <span className="text-emerald-700 font-extrabold flex items-center gap-1"><Check className="w-3.5 h-3.5 text-emerald-500 shrink-0" /> ✓ Uploaded</span>
+311:                         ) : (
+312:                           <span className={`text-[10px] uppercase font-black tracking-wide ${doc.req ? 'text-amber-600' : 'text-slate-400 font-medium'}`}>{doc.req ? 'Pending Upload' : 'Optional Slot'}</span>
+313:                         )}
+314:                       </td>
+315:                       <td className="p-2.5 text-center">
+316:                         <button type="button" onClick={() => simulateDocumentUpload(doc.key)} className="h-7 px-3 border bg-white rounded-lg font-bold text-slate-700 hover:bg-slate-50 flex items-center gap-1 mx-auto select-none"><Upload className="w-3 h-3 text-slate-400" /><span>Verify</span></button>
+317:                       </td>
+318:                     </tr>
+319:                   ))}
+320:                 </tbody>
+321:               </table>
+322: 
+323:               {/* MOBILE STACKED CARDS VIEW */}
+324:               <div className="sm:hidden divide-y divide-slate-100 bg-white">
+325:                 {[
+326:                   { key: 'aadhaarAddress', label: 'Aadhaar Address Print Match', req: true },
+327:                   { key: 'utilityBill', label: 'Utility Electricity Bill Scan', req: false },
+328:                   { key: 'bankStatement', label: 'Bank Statement / Passbook page', req: false },
+329:                   { key: 'rentalAgreement', label: 'Registered Rental Agreement', req: false }
+330:                 ].map((doc) => (
+331:                   <div key={doc.key} className="p-3.5 flex flex-col gap-2">
+332:                     <div className="flex justify-between items-start">
+333:                       <span className="text-slate-950 font-bold text-xs">{doc.label} {doc.req && <span className="text-rose-500 font-black">*</span>}</span>
+334:                       {documentsState[doc.key] ? (
+335:                         <span className="text-emerald-750 font-black text-[10px] flex items-center gap-0.5"><Check className="w-3 h-3 text-emerald-500 shrink-0" /> Uploaded</span>
+336:                       ) : (
+337:                         <span className={`text-[9px] font-black uppercase ${doc.req ? 'text-amber-600' : 'text-slate-400 font-medium'}`}>{doc.req ? 'Pending' : 'Optional'}</span>
+338:                       )}
+339:                     </div>
+340:                     <button type="button" onClick={() => simulateDocumentUpload(doc.key)} className="w-full h-8 border bg-white rounded-xl font-bold text-[11px] text-slate-700 hover:bg-slate-50 flex items-center justify-center gap-1.5"><Upload className="w-3.5 h-3.5 text-slate-400" /><span>Verify</span></button>
+341:                   </div>
+342:                 ))}
+343:               </div>
+344:             </div>
+345:           </div>
+346: 
+347:           {/* SECTION 4 — FINANCIAL MATRIX SECTION TABLE */}
+348:           <div className="space-y-2">
+349:             <div className="flex justify-between items-baseline border-b border-slate-100 pb-1.5 select-none">
+350:               <span className="text-[10px] font-black uppercase text-[#0B1F5B] tracking-widest block">Section 4 — Financial Documents</span>
+351:               <div className="text-right text-[10px] font-black uppercase text-slate-400">Income Status: <span className="text-amber-600 font-black">Pending</span></div>
+352:             </div>
+353:             <div className="border border-slate-200 rounded-xl overflow-hidden bg-white shadow-3xs w-full">
+354:               <table className="hidden sm:table w-full text-xs text-left text-slate-600 border-collapse">
+355:                 <thead>
+356:                   <tr className="bg-slate-50 font-black text-[9px] text-slate-400 uppercase border-b tracking-wider select-none">
+357:                     <th className="p-2.5 pl-4 w-[40%]">Financial Proof Slabs</th>
+358:                     <th className="p-2.5 w-[35%]">Fulfillment Tracking</th>
+359:                     <th className="p-2.5 text-center w-[25%]">Actions</th>
+360:                   </tr>
+361:                 </thead>
+362:                 <tbody className="divide-y divide-slate-100 font-semibold text-[11px]">
+363:                   {[
+364:                     { key: 'salarySlips', label: 'Salary Slips (Last 3 Months Slabs)' },
+365:                     { key: 'form16', label: 'Form 16 Certificate Assessment' },
+366:                     { key: 'itrDoc', label: 'Income Tax Returns (ITR Acknowledgement)' },
+367:                     { key: 'bankStatementFinancial', label: 'Operating Bank Statement (6 Months)' }
+368:                   ].map((doc) => (
+369:                     <tr key={doc.key} className="hover:bg-slate-50/40">
+370:                       <td className="p-2.5 pl-4 text-slate-900 font-bold">{doc.label} <span className="text-rose-500 font-black">*</span></td>
+371:                       <td className="p-2.5">
+372:                         {documentsState[doc.key] ? (
+373:                           <span className="text-emerald-700 font-extrabold flex items-center gap-1"><Check className="w-3.5 h-3.5 text-emerald-500 shrink-0" /> ✓ Uploaded</span>
+374:                         ) : (
+375:                           <span className="text-amber-600 text-[10px] uppercase font-black tracking-wide">Pending Upload</span>
+376:                         )}
+377:                       </td>
+378:                       <td className="p-2.5 text-center">
+379:                         <button type="button" onClick={() => simulateDocumentUpload(doc.key)} className="h-7 px-3 border bg-white rounded-lg font-bold text-slate-700 hover:bg-slate-50 flex items-center gap-1 mx-auto select-none"><Upload className="w-3 h-3 text-slate-400" /><span>Upload</span></button>
+380:                       </td>
+381:                     </tr>
+382:                   ))}
+383:                 </tbody>
+384:               </table>
+385: 
+386:               {/* MOBILE STACKED CARDS VIEW */}
+387:               <div className="sm:hidden divide-y divide-slate-100 bg-white">
+388:                 {[
+389:                   { key: 'salarySlips', label: 'Salary Slips (Last 3 Months Slabs)' },
+390:                   { key: 'form16', label: 'Form 16 Certificate Assessment' },
+391:                   { key: 'itrDoc', label: 'Income Tax Returns (ITR Acknowledgement)' },
+392:                   { key: 'bankStatementFinancial', label: 'Operating Bank Statement (6 Months)' }
+393:                 ].map((doc) => (
+394:                   <div key={doc.key} className="p-3.5 flex flex-col gap-2">
+395:                     <div className="flex justify-between items-start">
+396:                       <span className="text-slate-950 font-bold text-xs">{doc.label} <span className="text-rose-500 font-black">*</span></span>
+397:                       {documentsState[doc.key] ? (
+398:                         <span className="text-emerald-750 font-black text-[10px] flex items-center gap-0.5"><Check className="w-3 h-3 text-emerald-500 shrink-0" /> Uploaded</span>
+399:                       ) : (
+400:                         <span className="text-amber-600 text-[9px] font-black uppercase">Pending</span>
+401:                       )}
+402:                     </div>
+403:                     <button type="button" onClick={() => simulateDocumentUpload(doc.key)} className="w-full h-8 border bg-white rounded-xl font-bold text-[11px] text-slate-700 hover:bg-slate-50 flex items-center justify-center gap-1.5"><Upload className="w-3.5 h-3.5 text-slate-400" /><span>Upload</span></button>
+404:                   </div>
+405:                 ))}
+406:               </div>
+407:             </div>
+408:           </div>
+409: 
+410:           {/* CUSTOMER PHOTO & BANK DETAIL TILES BLOCK */}
+411:           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 pt-2">
+412:             
+413:             {/* PHOTO CARD CONFIG */}
+414:             <div className="border border-slate-200 bg-white rounded-xl p-4 shadow-3xs flex flex-col justify-between min-h-[220px]">
+415:               <span className="text-[10px] font-black uppercase text-slate-400 tracking-wider block border-b pb-1.5 select-none">Section 5 — Customer Photograph</span>
+416:               <div 
+417:                 onClick={() => simulateDocumentUpload('customerPhoto')}
+418:                 className="flex-1 border-2 border-dashed border-slate-200 bg-slate-50/50 hover:bg-slate-50 hover:border-slate-300 rounded-xl flex flex-col items-center justify-center p-4 my-3 text-center cursor-pointer select-none transition-colors"
+419:               >
+420:                 {documentsState.customerPhoto ? (
+421:                   <div className="text-center space-y-1 text-emerald-700 font-bold text-xs">
+422:                     <CheckCircle2 className="w-5 h-5 text-emerald-500 mx-auto" />
+423:                     <span>✓ Photo Scan Attached</span>
+424:                     <span className="text-[9px] text-slate-400 font-mono block font-medium truncate max-w-[180px]">{documentsState.customerPhoto}</span>
+425:                   </div>
+426:                 ) : (
+427:                   <div className="text-center space-y-1 text-slate-400 font-medium text-[11px]">
+428:                     <Upload className="w-4 h-4 text-slate-300 mx-auto mb-0.5" />
+429:                     <span className="font-bold text-slate-700 block">Click to Upload Area</span>
+430:                     <span>Requirements: JPG, PNG | Max 5 MB Slabs</span>
+431:                   </div>
+432:                 )}
+433:               </div>
+434:               <div className="text-[10px] font-black uppercase text-slate-400 select-none text-right">Status: <span className={documentsState.customerPhoto ? 'text-emerald-600':'text-amber-600'}>{documentsState.customerPhoto ? 'Uploaded':'Pending'}</span></div>
+435:             </div>
+436: 
+437:             {/* INTEGRATED BANK ACCOUNT PROFILE DETAIL TILE */}
+438:             <div className="border border-slate-200 bg-white rounded-xl p-4 shadow-3xs flex flex-col justify-between min-h-[220px]">
+439:               <span className="text-[10px] font-black uppercase text-slate-400 tracking-wider block border-b pb-1.5 select-none">Section 6 — Bank Account Verification</span>
+440:               
+441:               <div className="grid grid-cols-2 gap-x-3 gap-y-2.5 text-[11px] font-semibold text-slate-600 my-auto py-2">
+442:                 <div className="min-w-0"><span className="text-slate-400 text-[9px] uppercase font-black block">Holder Name</span><span className="text-black font-bold block mt-0.5 truncate" title={bankDetails.holderName}>{bankDetails.holderName}</span></div>
+443:                 <div className="min-w-0"><span className="text-slate-400 text-[9px] uppercase font-black block">Bank Identifier</span><span className="text-slate-900 font-bold block mt-0.5 truncate">{bankDetails.bankName}</span></div>
+444:                 <div><span className="text-slate-400 text-[9px] uppercase font-black block">Account Number</span><span className="text-slate-900 font-mono font-bold block mt-0.5">{bankDetails.accountNumber}</span></div>
+445:                 <div><span className="text-slate-400 text-[9px] uppercase font-black block">IFSC Code</span><span className="text-slate-900 font-mono block mt-0.5">{bankDetails.ifscCode}</span></div>
+446:               </div>
+447: 
+448:               <div className="flex items-center justify-between border-t border-slate-100 pt-2 gap-3 mt-1">
+449:                 <div className="min-w-0 flex-1">
+450:                   <span className="text-slate-400 text-[9px] uppercase font-black block">Evidence File</span>
+451:                   <span className="text-[10px] text-slate-900 font-medium block truncate mt-0.5" title={documentsState.cancelledCheque || 'Pending'}>{documentsState.cancelledCheque || 'Cancelled Cheque Pending'}</span>
+452:                 </div>
+453:                 <button type="button" onClick={() => simulateDocumentUpload('cancelledCheque')} className="h-7 px-2.5 border bg-white hover:bg-slate-50 rounded-lg text-[11px] font-bold text-slate-700 select-none flex items-center gap-1 shrink-0"><Upload className="w-3 h-3 text-slate-400" /><span>Upload</span></button>
+454:               </div>
+455:             </div>
+456: 
+457:           </div>
+458: 
+459:           {/* LOWER INTERFACE CONTROLLER ACTION STRIP BAR */}
+460:           <div className="pt-4 flex flex-col sm:flex-row items-center justify-between gap-3 border-t border-slate-100 select-none">
+461:             <button type="button" onClick={() => triggerToast('Form records cached inside CRM system memory data lanes.')} className="w-full sm:w-auto h-10 px-4 border border-slate-200 text-slate-700 bg-white font-bold text-xs rounded-xl hover:bg-slate-50 flex items-center justify-center gap-1.5"><Save className="w-3.5 h-3.5 text-slate-400" /><span>Save Draft</span></button>
+462:             <button 
+463:               type="button" 
+464:               disabled={!kycMetrics.isProceedEligible}
+465:               onClick={handleCompleteKYCPipeline}
+466:               className={`w-full sm:w-auto h-11 px-6 text-white font-black text-xs rounded-xl shadow-sm flex items-center justify-center gap-1.5 focus:outline-none transition-all ${kycMetrics.isProceedEligible ? 'bg-[#0B1F5B] hover:bg-black' : 'bg-slate-300 cursor-not-allowed opacity-60'}`}
+467:             >
+468:               <span>Complete KYC & Proceed to Medical →</span>
+469:             </button>
+470:           </div>
+471: 
+472:         </div>
+473: 
+474:         {/* ==========================================================================
+475:             RIGHT COLUMN — PROPOSAL SNAPSHOT PREVIEW SIDEBAR PANEL
+476:             Connected directly to the dynamic backend engine to fix layout overrides
+477:            ========================================================================== */}
+478:         <div className="lg:col-span-4 space-y-5 lg:sticky lg:top-[88px] text-left select-none min-w-0">
+479:           
+480:           <div className="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm space-y-3.5">
+481:             <div className="border-b border-slate-100 pb-2 flex items-center gap-1.5 text-[#0B1F5B]">
+482:               <ShieldCheck className="w-4 h-4 shrink-0" />
+483:               <h4 className="text-[10px] font-black uppercase tracking-wider">Proposal Snapshot</h4>
+484:             </div>
+485: 
+486:             <div className="grid grid-cols-2 gap-y-3 gap-x-3 text-xs font-semibold text-slate-600">
+487:               <div className="min-w-0"><span className="text-slate-400 text-[9px] uppercase block font-black">Proposal Number</span><span className="text-black font-mono font-bold block mt-0.5 select-all">{proposalSnapshot.proposalNumber}</span></div>
+488:               <div className="min-w-0"><span className="text-slate-400 text-[9px] uppercase block font-black">Customer Name</span><span className="text-black font-bold block mt-0.5 truncate" title={proposalSnapshot.customerName}>{proposalSnapshot.customerName}</span></div>
+489:               <div className="min-w-0"><span className="text-slate-400 text-[9px] uppercase block font-black">Underwrite Carrier</span><span className="text-slate-900 font-bold block mt-0.5 truncate" title={proposalSnapshot.insurer}>{proposalSnapshot.insurer}</span></div>
+490:               <div className="min-w-0"><span className="text-slate-400 text-[9px] uppercase block font-black">Face Cover Limit</span><span className="text-slate-900 font-bold block mt-0.5 truncate">{proposalSnapshot.coverAmount}</span></div>
+491:               <div className="col-span-2 border-t border-slate-100 pt-2"><span className="text-slate-400 text-[9px] uppercase block font-black">KYC Operations Completion</span><span className="text-[#0B1F5B] font-black text-sm block mt-0.5">{kycMetrics.completionPercentage}% Complete</span></div>
+492:             </div>
+493:           </div>
+494: 
+495:           <div className="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm space-y-3 text-xs font-semibold text-slate-600">
+496:             <span className="text-[10px] font-black uppercase text-slate-400 tracking-wider block border-b pb-1.5">Insurance Process Milestone Progress</span>
+497:             <div className="space-y-3 relative pl-4 border-l border-slate-100 mt-2 font-bold text-[11px]">
+498:               <div className="relative"><span className="absolute -left-[21px] top-0.5 h-2.5 w-2.5 rounded-full bg-emerald-500 border-2 border-white ring-2 ring-emerald-100"></span><span className="text-emerald-700 block">Proposal Submitted</span></div>
+499:               <div className="relative"><span className="absolute -left-[21px] top-0.5 h-2.5 w-2.5 rounded-full bg-amber-500 border-2 border-white ring-2 ring-amber-100 animate-pulse"></span><span className="text-amber-700 block">KYC Document Verification</span></div>
+500:               <div className="relative"><span className="absolute -left-[21px] top-0.5 h-2 w-2 rounded-full bg-slate-200 border border-white"></span><span className="text-slate-400 block font-medium">Medical Underwriting Assessment</span></div>
+501:             </div>
+502:           </div>
+503: 
+504:         </div>
+505: 
+506:       </main>
+507:     </div>
+508:   );
+509: }
+The above content shows the entire, complete file contents of the requested file.

@@ -1,0 +1,286 @@
+{
+  "recordMap": {
+    "__version__": 3,
+    "block": {
+      "3a7be7f0-e9f3-80b6-a1d2-e2807d0dc7f2": {
+        "spaceId": "d22be7f0-e9f3-8145-be28-00039967f226",
+        "value": {
+          "value": {
+            "id": "3a7be7f0-e9f3-80b6-a1d2-e2807d0dc7f2",
+            "version": 424,
+            "type": "page",
+            "properties": {
+              "title": [
+                [
+                  "\u2708\ufe0f Product Case Study: Designing MakeMyTrip's First-Time Flyer Experience for Tier-2/3 India",
+                  [
+                    [
+                      "b"
+                    ]
+                  ]
+                ]
+              ]
+            },
+            "content": [
+              "3a9be7f0-e9f3-80a6-9943-de64a24e1d1e",
+              "3a9be7f0-e9f3-805f-ac58-c1a0497044e8",
+              "3a9be7f0-e9f3-80fd-86ac-c21405829f25",
+              "3a9be7f0-e9f3-8012-b9ad-dd1a520c8750",
+              "3a9be7f0-e9f3-800d-ae15-e7431ea6f063",
+              "3a9be7f0-e9f3-8055-84ae-f359a18fc59f",
+              "3a9be7f0-e9f3-80fd-bcf0-e93695e7f8ca",
+              "3a9be7f0-e9f3-8014-8eab-e2cb1e587454",
+              "3a9be7f0-e9f3-800e-af3d-d1a3c7ccec6d",
+              "3a9be7f0-e9f3-80cf-a7b4-cdca22c7f3b8",
+              "3a9be7f0-e9f3-80fe-bed8-dd736571d5d0",
+              "3a9be7f0-e9f3-805e-b230-d70229801171",
+              "3a9be7f0-e9f3-804d-b9ed-f1c42ffd0b45",
+              "3a9be7f0-e9f3-80ce-9266-f6065ea74da3",
+              "3a9be7f0-e9f3-80a0-aa38-cef2722590e0",
+              "3a9be7f0-e9f3-805e-87a1-fe66eda57f6c",
+              "3a9be7f0-e9f3-8014-9ee0-c153b75bb3bf",
+              "3a9be7f0-e9f3-80a7-98c5-eb84d3629714",
+              "3a9be7f0-e9f3-8046-b324-f87b034107a7",
+              "3a9be7f0-e9f3-80ae-a1f4-e1b2d730873e",
+              "3a9be7f0-e9f3-8084-8708-d427178b07fe",
+              "3a9be7f0-e9f3-8009-8e55-c13726313738",
+              "3a9be7f0-e9f3-80b5-bcdb-e0e55dfee060",
+              "3a9be7f0-e9f3-80a1-b5f0-c2781c0f58ae",
+              "3a9be7f0-e9f3-809c-b99d-ca0e9636b499",
+              "3a9be7f0-e9f3-801f-b037-c7be81d67dd8",
+              "3a9be7f0-e9f3-8039-8640-f301691782d2",
+              "3a9be7f0-e9f3-80ae-91e9-d6432bb0922f",
+              "3a9be7f0-e9f3-80f2-aabf-fd8229f597ec",
+              "3a9be7f0-e9f3-80b9-925e-ec66cb65c877",
+              "3a9be7f0-e9f3-8011-af35-e15ea417d1f1",
+              "3a9be7f0-e9f3-8089-914d-f56761d16f3c",
+              "3a9be7f0-e9f3-80ad-ac49-f84c780b815f",
+              "3a9be7f0-e9f3-805d-9f31-d175d8913351",
+              "3a9be7f0-e9f3-8064-812a-d269e7fd484e",
+              "3a9be7f0-e9f3-80b2-9f12-ee9737ea0c37",
+              "3a9be7f0-e9f3-80ac-b96c-c38cbd3db6cd",
+              "3a9be7f0-e9f3-80a7-a1cf-c629e43ed9ce",
+              "3a9be7f0-e9f3-8038-900a-d0f924b6f4cb",
+              "3a9be7f0-e9f3-8029-a25d-f1db27cf0b4c",
+              "3a9be7f0-e9f3-80db-acaf-d800a9afda42",
+              "3a9be7f0-e9f3-807a-8e40-eb1ce9c7f7e6",
+              "3a9be7f0-e9f3-80e1-bf2b-f58e60fb8f21",
+              "3a9be7f0-e9f3-8018-adf9-eadb831cda57",
+              "3a9be7f0-e9f3-80da-8257-febd0ddf4b37",
+              "3a9be7f0-e9f3-804d-9441-fcd90b84204f",
+              "3a9be7f0-e9f3-80a3-93de-f87050f735a2",
+              "3a9be7f0-e9f3-8097-89d2-de4575dae8fb",
+              "3a9be7f0-e9f3-8051-9cff-d2145c4e08ee",
+              "3a9be7f0-e9f3-80ec-89e8-deae5edd9375",
+              "3a9be7f0-e9f3-8083-9990-ecfb9d408efb",
+              "3a9be7f0-e9f3-80d6-bacb-d9b74ed16a40",
+              "3a9be7f0-e9f3-8094-826b-fffd99add2f8",
+              "3a9be7f0-e9f3-8016-8016-d8b52d672599",
+              "3a9be7f0-e9f3-800c-8992-ffe099c9d6d8",
+              "3a9be7f0-e9f3-8076-b793-f793cdbcf0f2",
+              "3a9be7f0-e9f3-8030-923d-d506e7ef7de4",
+              "3a9be7f0-e9f3-8042-bb1c-cadebf258e11",
+              "3a9be7f0-e9f3-80dc-993c-e8937d25dd6d",
+              "3a9be7f0-e9f3-8011-a3fa-f3dbd5ef5662",
+              "3a9be7f0-e9f3-8087-8a5f-dff3a144aa71",
+              "3a9be7f0-e9f3-80e7-bc2f-d645098bb246",
+              "3a9be7f0-e9f3-806b-91c4-cefa73371a87",
+              "3a9be7f0-e9f3-802f-975e-c376ef1562be",
+              "3a9be7f0-e9f3-8086-bcfd-c23f01089e99",
+              "3a9be7f0-e9f3-802a-8fbb-e5d1449caed3",
+              "3a9be7f0-e9f3-80b0-a5d8-c5ccf1ecb764",
+              "3a9be7f0-e9f3-8044-a592-eaa44e6f57ee",
+              "3a9be7f0-e9f3-80b7-9a16-c96cf3dc32ba"
+            ],
+            "format": {
+              "page_cover": "attachment:46635f9b-6cc1-48a6-9224-c439529df30a:screen.png",
+              "page_cover_position": 0.4149,
+              "social_media_image_preview_url": "attachment:bad0b952-32c9-4eab-8fe8-a8b321a4af6a:SocialMediaPreviewImage.png"
+            },
+            "permissions": [
+              {
+                "role": "reader",
+                "type": "public_permission",
+                "added_timestamp": 1784930719491,
+                "is_public_share_link": true
+              }
+            ],
+            "created_time": 1784861654364,
+            "last_edited_time": 1785094387703,
+            "parent_id": "d22be7f0-e9f3-8145-be28-00039967f226",
+            "parent_table": "space",
+            "alive": true,
+            "file_ids": [
+              "46635f9b-6cc1-48a6-9224-c439529df30a",
+              "bad0b952-32c9-4eab-8fe8-a8b321a4af6a"
+            ],
+            "space_id": "d22be7f0-e9f3-8145-be28-00039967f226",
+            "crdt_format_version": 1,
+            "crdt_data": {
+              "title": {
+                "r": "OFDxZdMZnnCZrIYmun0xYg,\"start\",\"end\"",
+                "n": {
+                  "OFDxZdMZnnCZrIYmun0xYg,\"start\",\"end\"": {
+                    "s": {
+                      "x": "OFDxZdMZnnCZrIYmun0xYg",
+                      "i": [
+                        {
+                          "t": "s"
+                        },
+                        {
+                          "t": "t",
+                          "i": [
+                            "qKW6f-LGNypW",
+                            1
+                          ],
+                          "o": "start",
+                          "l": -69
+                        },
+                        {
+                          "t": "e"
+                        }
+                      ],
+                      "l": ""
+                    },
+                    "c": [
+                      "iqXuFLp3jYRALAy6POm6KQ,[\"qKW6f-LGNypW\",90],\"end\""
+                    ]
+                  },
+                  "iqXuFLp3jYRALAy6POm6KQ,[\"qKW6f-LGNypW\",90],\"end\"": {
+                    "s": {
+                      "x": "iqXuFLp3jYRALAy6POm6KQ",
+                      "i": [
+                        {
+                          "t": "p",
+                          "i": [
+                            "qKW6f-LGNypW",
+                            90
+                          ],
+                          "o": "start"
+                        },
+                        {
+                          "t": "t",
+                          "i": [
+                            "Z7nQ_xOLK9ov",
+                            91
+                          ],
+                          "o": [
+                            "qKW6f-LGNypW",
+                            90
+                          ],
+                          "l": 92,
+                          "c": "\u2708\ufe0f Product Case Study: Designing MakeMyTrip's First-Time Flyer Experience for Tier-2/3 India",
+                          "b": [
+                            {
+                              "t": "a",
+                              "x": "iqXuFLp3jYRALAy6POm6KQ",
+                              "l": "l",
+                              "i": [
+                                "Z7nQ_xOLK9ov",
+                                183
+                              ],
+                              "s": {
+                                "i": [
+                                  "Z7nQ_xOLK9ov",
+                                  91
+                                ],
+                                "a": "b"
+                              },
+                              "e": {
+                                "i": [
+                                  "GBaUxUjg_-Uq",
+                                  1
+                                ],
+                                "a": "b"
+                              },
+                              "a": [
+                                "b"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "t": "t",
+                          "i": [
+                            "GBaUxUjg_-Uq",
+                            1
+                          ],
+                          "o": "start",
+                          "l": -69,
+                          "b": []
+                        },
+                        {
+                          "t": "e"
+                        }
+                      ],
+                      "l": "l"
+                    },
+                    "c": [
+                      "-i9J4xGDx827v9UNSZoY4A,[\"Z7nQ_xOLK9ov\",114],\"end\""
+                    ]
+                  },
+                  "-i9J4xGDx827v9UNSZoY4A,[\"Z7nQ_xOLK9ov\",114],\"end\"": {
+                    "s": {
+                      "x": "-i9J4xGDx827v9UNSZoY4A",
+                      "i": [
+                        {
+                          "t": "p",
+                          "i": [
+                            "Z7nQ_xOLK9ov",
+                            114
+                          ],
+                          "o": "start"
+                        },
+                        {
+                          "t": "t",
+                          "i": [
+                            "QidkRKJyOiCZ",
+                            1
+                          ],
+                          "o": "start",
+                          "l": -92,
+                          "b": [
+                            {
+                              "t": "a",
+                              "x": "-i9J4xGDx827v9UNSZoY4A",
+                              "l": "",
+                              "i": [
+                                "QidkRKJyOiCZ",
+                                93
+                              ],
+                              "s": {
+                                "i": [
+                                  "QidkRKJyOiCZ",
+                                  1
+                                ],
+                                "a": "b"
+                              },
+                              "e": {
+                                "i": "end",
+                                "a": "b"
+                              },
+                              "a": [
+                                "b"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "t": "e",
+                          "b": []
+                        }
+                      ],
+                      "l": "l"
+                    },
+                    "c": []
+                  }
+                }
+              }
+            }
+          },
+          "role": "reader"
+        }
+      }
+    }
+  }
+}

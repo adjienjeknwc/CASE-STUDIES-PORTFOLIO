@@ -1,0 +1,82 @@
+Created At: 2026-07-24T21:50:55Z
+Completed At: 2026-07-24T21:50:55Z
+File Path: `file:///Users/aditi/Downloads/stitch_minimalist_product_strategy_portfolio/src/data/projects.ts`
+Total Lines: 77
+Total Bytes: 3475
+Showing lines 1 to 77
+The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+1: export interface CaseStudy {
+2:   id: string;
+3:   title: string;
+4:   subtitle: string;
+5:   category: "ALL" | "STRATEGY" | "GROWTH" | "0-TO-1" | "AI & SYSTEMS";
+6:   type: string;
+7:   role: string;
+8:   focusMetric: string;
+9:   summary: string;
+10:   tags: string[];
+11:   badgeColor: string;
+12:   images?: string[];
+13: }
+14: 
+15: export const CASE_STUDIES: CaseStudy[] = [
+16:   {
+17:     id: "swiggy",
+18:     title: "Fixing Swiggy's Workplace Ordering Problem",
+19:     subtitle: "Group ordering for shared workplaces with individual UPI billing & single consolidated delivery",
+20:     category: "STRATEGY",
+21:     type: "Feature-Gap Product Case Study",
+22:     role: "Product Manager (Case Study)",
+23:     focusMetric: "Delivery Cost Efficiency & Group AOV",
+24:     summary: "How Swiggy can let coworkers in the same building order together with one shared cart, one delivery, and individual UPI checkout — without adding friction to individual ordering.",
+25:     tags: ["FoodTech", "Group Checkout", "Logistics Efficiency", "UPI Payments", "B2B Expansion"],
+26:     badgeColor: "bg-amber-300"
+27:   },
+28:   {
+29:     id: "duolingo",
+30:     title: "Increasing 7-Day Retention for New Users on Duolingo",
+31:     subtitle: "Metric-first product strategy focusing on habit formation without gamification bloat",
+32:     category: "GROWTH",
+33:     type: "Metric-First Product Case Study",
+34:     role: "Product Manager (Case Study)",
+35:     focusMetric: "New User 7-Day Retention",
+36:     summary: "Solving early drop-off for new language learners b
+<truncated 236 bytes>
+1:     id: "makemytrip",
+42:     title: "Designing MakeMyTrip's First-Time Flyer Experience for Tier-2/3 India",
+43:     subtitle: "0-to-1 Product Case Study empowering first-time domestic travelers",
+44:     category: "0-TO-1",
+45:     type: "0-to-1 Product Case Study",
+46:     role: "Product Manager (Case Study)",
+47:     focusMetric: "Booking Conversion & Support Contact Reduction",
+48:     summary: "Bridging the anxiety and knowledge gap for first-time flyers crossing from 'flights are not for me' to 'I can afford this'.",
+49:     tags: ["TravelTech", "Tier-2/3 India", "0-to-1 UX", "Vernacular Design", "Inclusion"],
+50:     badgeColor: "bg-cyan-300"
+51:   },
+52:   {
+53:     id: "dermalink",
+54:     title: "Dermalink — AI Skin Health Auditor",
+55:     subtitle: "Computer vision and LLM powered ingredient analyzer and routine builder",
+56:     category: "AI & SYSTEMS",
+57:     type: "AI Product Architecture",
+58:     role: "Product & AI Engineer",
+59:     focusMetric: "Diagnostic Accuracy & Daily Active Engagement",
+60:     summary: "AI-powered skincare diagnostic engine that scores routine safety, maps ingredients, and recommends dermatological fixes.",
+61:     tags: ["HealthTech", "Gemini Vision API", "AI Diagnostics", "React", "Node.js"],
+62:     badgeColor: "bg-purple-300"
+63:   },
+64:   {
+65:     id: "betacare",
+66:     title: "BetaCare — Life Insurance Agent Command Center",
+67:     subtitle: "Agentic workflow automation for suitability audits and quote generation",
+68:     category: "AI & SYSTEMS",
+69:     type: "Enterprise Agentic Platform",
+70:     role: "Lead Systems Architect",
+71:     focusMetric: "Agent Conversion Rate & Audit Time Saved",
+72:     summary: "Empowering insurance agents with instant suitability scoring, objection handling scripts, and dynamic quote builders.",
+73:     tags: ["InsurTech", "Agentic AI", "LlamaIndex", "Next.js", "Enterprise SaaS"],
+74:     badgeColor: "bg-rose-300"
+75:   }
+76: ];
+77: 
+The above content shows the entire, complete file contents of the requested file.

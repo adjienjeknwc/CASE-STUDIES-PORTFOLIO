@@ -1,0 +1,90 @@
+{{ CHECKPOINT 16 }}
+ **The earlier parts of this conversation have been truncated due to its long length. The following content summarizes the truncated context so that you may continue your work. **
+
+
+# User Requests
+The following were user requests from the truncated conversation in chronological order:
+1. ON PRESSING THE PROJECTS BUTTON ON NAVBAR ,IT SHOULD HAVE MY TECH PROJECTS ,DESIGN THE CARDS SIMILAR TO CASE STUDIES BUT WITH ONE IMAGE ON IT 
+2. NOW I WILL GIVE U README ON ALL THE PROJECTS I MADE ,U HAVE TO USE IT TO MAKE CARDS AND INNER DESCRIPTION 
+3. Grid-Lock
+
+EV Charging Platform
+
+A full-stack MERN application connecting EV drivers with home charging station hosts — GPS discovery, live booking, wallet payments, and real-time price bidding.
+
+React Node.js Express MongoDB Socket.io Leaflet Tailwind CSS
+
+Live Demo License PRs Welcome
+
+⚡ View Live App
+
+📖 Overview
+
+Grid-Lock is a full-stack MERN marketplace that connects EV drivers with everyday people who host home charging stations. Drivers can locate nearby chargers on a live map, reserve time slots for cars or bikes, pay through an integrated wallet, and leave reviews — while hosts get a dashboard to list and manage their own stations. A Socket.io real-time layer powers live price bidding, so charging costs can flex dynamically instead of being fixed.
+
+Screenshot 2026-07-15 at 2 27 28 PM Screenshot 2026-07-15 at 2 28 07 PM
+🚀 Features
+
+Feature	Description
+📍 Live GPS Tracking	Find chargers near your real-time location on an interactive map
+🗓️ Booking System	Reserve time slots for
+<truncated 3755 bytes>
+4. SentinelScale
+
+API Observability & Anomaly Gateway
+
+A distributed, high-performance API gatekeeper and telemetry observability engine — combining a sub-5ms edge reverse-proxy with adaptive, multi-tier AI threat classification.
+
+Go Python Next.js Apache Kafka PostgreSQL ONNX Runtime Gemini Docker D3.js
+
+Open in GitHub Codespaces License PRs Welcome
+
+⚡ Open in GitHub Codespaces — one-click sandbox, zero local setup
+
+📖 Overv
+<truncated 24519 bytes>
+fd2786-e1af-429d-a5f4-12badfc34977/media__1784929382407.png
+Last Edited: 2026-07-24T21:43:14Z
+
+[ARTIFACT: skills_hero_1783963862629]
+Path: file:///Users/aditi/.gemini/antigravity/brain/d0fd2786-e1af-429d-a5f4-12badfc34977/skills_hero_1783963862629.jpg
+Last Edited: 2026-07-13T17:31:02Z
+
+[ARTIFACT: task]
+Path: file:///Users/aditi/.gemini/antigravity/brain/d0fd2786-e1af-429d-a5f4-12badfc34977/task.md
+Last Edited: 2026-07-23T20:03:18Z
+
+[ARTIFACT: walkthrough]
+Path: file:///Users/aditi/.gemini/antigravity/brain/d0fd2786-e1af-429d-a5f4-12badfc34977/walkthrough.md
+Last Edited: 2026-07-24T03:14:38Z
+
+# Running Background Tasks
+The following background tasks were running at the time this checkpoint was created.
+Use the manage_task tool to interact with them (e.g. to kill them or check their status).
+
+{
+  "taskId": "d0fd2786-e1af-429d-a5f4-12badfc34977/task-2726",
+  "toolName": "run_command",
+  "toolSummary": "Start local dev server for Milestone 2 state",
+  "description": "npm run dev",
+  "startTime": "2026-07-24T10:16:43.486047Z",
+  "stepIndex": 2726,
+  "logUri": "file:///Users/aditi/.gemini/antigravity/brain/d0fd2786-e1af-429d-a5f4-12badfc34977/.system_generated/tasks/task-2726.log"
+}
+{
+  "taskId": "d0fd2786-e1af-429d-a5f4-12badfc34977/task-2861",
+  "toolName": "run_command",
+  "toolSummary": "Start local dev server on port 5174",
+  "description": "npm run dev -- --port 5174",
+  "startTime": "2026-07-24T10:42:06.264696Z",
+  "stepIndex": 2861,
+  "logUri": "file:///Users/aditi/.gemini/antigravity/brain/d0fd2786-e1af-429d-a5f4-12badfc34977/.system_generated/tasks/task-2861.log"
+}
+
+# Conversation Logs
+
+Reference the following log files for the full, untruncated conversation:
+
+- /Users/aditi/.gemini/antigravity/brain/d0fd2786-e1af-429d-a5f4-12badfc34977/.system_generated/logs/transcript.jsonl
+
+**IMPORTANT: this summary is just for your reference. You may respond to my previous and future messages, but DO NOT ACKNOWLEDGE THIS CHECKPOINT MESSAGE. JUST READ IT BUT DO NOT MENTION IT, RESPOND TO IT, OR TAKE ACTION BECAUSE OF IT.**

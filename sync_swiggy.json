@@ -1,0 +1,239 @@
+{
+  "recordMap": {
+    "__version__": 3,
+    "block": {
+      "3a7be7f0-e9f3-80a0-85c4-ec0f298ff7ec": {
+        "spaceId": "d22be7f0-e9f3-8145-be28-00039967f226",
+        "value": {
+          "value": {
+            "id": "3a7be7f0-e9f3-80a0-85c4-ec0f298ff7ec",
+            "version": 284,
+            "type": "page",
+            "properties": {
+              "title": [
+                [
+                  "Product Case Study: Fixing Swiggy's Workplace & Group Ordering Friction"
+                ]
+              ]
+            },
+            "content": [
+              "3a9be7f0-e9f3-805c-a1b1-e0a27071e967",
+              "3a9be7f0-e9f3-8091-964c-d51d593bf37f",
+              "3a9be7f0-e9f3-805e-8917-c8d41925d465",
+              "3a9be7f0-e9f3-8062-9749-c6866f5ece9c",
+              "3a9be7f0-e9f3-8095-8d4b-f6058f7cb63d",
+              "3a9be7f0-e9f3-805a-bc92-f93abf970566",
+              "3a9be7f0-e9f3-8013-89c9-d37b8db79548",
+              "3a9be7f0-e9f3-8079-84ad-f5a2b1d68b45",
+              "3a9be7f0-e9f3-80a2-9747-f6d7f9ba93c0",
+              "3a9be7f0-e9f3-80f9-bcbd-f5dbfba31b2a",
+              "3a9be7f0-e9f3-8078-bbe1-dea171a23e0f",
+              "3a9be7f0-e9f3-8064-a994-c141d04d7b09",
+              "3a9be7f0-e9f3-8069-b771-d0444da585e3",
+              "3a9be7f0-e9f3-80de-aa1a-ec77449f2b5c",
+              "3a9be7f0-e9f3-80bc-9b84-db5ad9fa25a9",
+              "3a9be7f0-e9f3-80c6-b46a-c2fc4f28b077",
+              "3a9be7f0-e9f3-8073-8b06-cbaec6579104",
+              "3a9be7f0-e9f3-8044-b7cb-f7245538484e",
+              "3a9be7f0-e9f3-809a-af49-da1b13c419c7",
+              "3a9be7f0-e9f3-8079-a3d1-e77a23319248",
+              "3a9be7f0-e9f3-807f-bdc0-ebecf3687064",
+              "3a9be7f0-e9f3-8047-a7a8-e88ca530c38c",
+              "3a9be7f0-e9f3-8072-bafb-ffbd5ba1144d",
+              "3a9be7f0-e9f3-80a9-a8cf-defa71d5ec38",
+              "3a9be7f0-e9f3-8004-b510-ca65f8469839",
+              "3a9be7f0-e9f3-801b-9b54-c1ce50a4b539",
+              "3a9be7f0-e9f3-802c-8d73-f79b7539e015",
+              "3a9be7f0-e9f3-8054-9109-d0b7428bcacb",
+              "3a9be7f0-e9f3-80a8-9cca-ef5ff9b468b2",
+              "3a9be7f0-e9f3-80b2-8a17-ff780e6d1c1d",
+              "3a9be7f0-e9f3-80da-b445-d295fdccde1b",
+              "3a9be7f0-e9f3-8040-80a9-c53fdc466a24",
+              "3a9be7f0-e9f3-8003-98d0-e37c897d1119",
+              "3a9be7f0-e9f3-80bb-bf25-f36f0f7abebb",
+              "3a9be7f0-e9f3-8009-86f9-ed32eebdd68d",
+              "3a9be7f0-e9f3-8091-bc78-fb79e1b2646a",
+              "3a9be7f0-e9f3-8005-bccb-cf95c2d6c253",
+              "3a9be7f0-e9f3-8003-b5e5-f40a84d5035e",
+              "3a9be7f0-e9f3-804e-8511-d652d04ffedb",
+              "3a9be7f0-e9f3-800e-b842-d89269a52667",
+              "3a9be7f0-e9f3-8064-beba-e0baeea0a43d",
+              "3a9be7f0-e9f3-8060-a897-e813464c07fa",
+              "3a9be7f0-e9f3-808c-98e1-cc6655830304",
+              "3a9be7f0-e9f3-80b2-a191-c69e3d8dd724",
+              "3a9be7f0-e9f3-803b-b2b0-df7477c70aa1",
+              "3a9be7f0-e9f3-80ee-85f0-c6a2d7f3f9fd",
+              "3a9be7f0-e9f3-80d1-82dd-d070383e3b5f",
+              "3a9be7f0-e9f3-805a-b598-de9f473979a1",
+              "3a9be7f0-e9f3-8024-9799-df8872fc0791",
+              "3a9be7f0-e9f3-8029-afb0-c974002e7754",
+              "3a9be7f0-e9f3-80cb-a523-ec64b8d2c865",
+              "3a9be7f0-e9f3-803f-87b7-c97029d10c4d",
+              "3a9be7f0-e9f3-80b8-92f0-c18ee3ab7f47",
+              "3a9be7f0-e9f3-80f0-9349-c47655478f37",
+              "3a9be7f0-e9f3-803f-8e86-cd829f4f2d7e",
+              "3a9be7f0-e9f3-8067-adfb-ca8b0f6f87ff",
+              "3a9be7f0-e9f3-8006-96f9-c704af76ce8c",
+              "3a9be7f0-e9f3-8041-8bc6-fe74681acb02",
+              "3a9be7f0-e9f3-805d-b2df-f8178be5ce20",
+              "3a9be7f0-e9f3-80ac-baf8-c73efa9c535f",
+              "3a9be7f0-e9f3-80ce-93e1-dd3aa6482adb",
+              "3a9be7f0-e9f3-8089-a536-d65cc286bcff",
+              "3a9be7f0-e9f3-8038-8c14-e468a94f6ce1",
+              "3a9be7f0-e9f3-808e-a96e-e13535f8efae",
+              "3a9be7f0-e9f3-8077-b62e-d1711d914bd0",
+              "3a9be7f0-e9f3-808d-9149-e8ed7c18570e",
+              "3a9be7f0-e9f3-8093-9517-fdb91fa9b9f9",
+              "3a9be7f0-e9f3-806d-91a9-d92f05304bae",
+              "3a9be7f0-e9f3-80f7-827c-d46c072fe95c",
+              "3a9be7f0-e9f3-80b9-a6c5-cf0c59f87cbb",
+              "3a9be7f0-e9f3-80d7-a33a-f63952248aa1",
+              "3a9be7f0-e9f3-80a8-9762-da8bcacbeefe",
+              "3a9be7f0-e9f3-80a2-84c3-fb4f7185b02c",
+              "3a9be7f0-e9f3-8043-addc-e1a1b7bc8996",
+              "3a9be7f0-e9f3-80a9-9817-e2aa673edb53",
+              "3a9be7f0-e9f3-8087-bd79-cce67885838d",
+              "3a9be7f0-e9f3-8087-81d0-f84789bfb997",
+              "3a9be7f0-e9f3-80b6-81df-e29dd15931c8",
+              "3a9be7f0-e9f3-808f-a6a7-cfd09dd773cc",
+              "3a9be7f0-e9f3-80c6-834e-e36621db6bb1",
+              "3a9be7f0-e9f3-805f-babb-dbe3e413e770"
+            ],
+            "format": {
+              "page_cover": "attachment:a80208bc-e4dc-4eaf-b2be-d80ba5412659:screen.png",
+              "page_cover_position": 0.5,
+              "social_media_image_preview_url": "attachment:9bb84fd0-d3b5-4cf9-92ee-3940ab663008:SocialMediaPreviewImage.png"
+            },
+            "permissions": [
+              {
+                "role": "reader",
+                "type": "public_permission",
+                "added_timestamp": 1784930743555,
+                "is_public_share_link": true
+              }
+            ],
+            "created_time": 1784884537703,
+            "last_edited_time": 1785093846318,
+            "parent_id": "d22be7f0-e9f3-8145-be28-00039967f226",
+            "parent_table": "space",
+            "alive": true,
+            "file_ids": [
+              "a80208bc-e4dc-4eaf-b2be-d80ba5412659",
+              "643ac1b5-9e52-477b-8be3-0e92d4e90834",
+              "9bb84fd0-d3b5-4cf9-92ee-3940ab663008"
+            ],
+            "space_id": "d22be7f0-e9f3-8145-be28-00039967f226",
+            "crdt_format_version": 1,
+            "crdt_data": {
+              "title": {
+                "r": "qo6ygoJ_V6P0cStVBmE8Fw,\"start\",\"end\"",
+                "n": {
+                  "qo6ygoJ_V6P0cStVBmE8Fw,\"start\",\"end\"": {
+                    "s": {
+                      "x": "qo6ygoJ_V6P0cStVBmE8Fw",
+                      "i": [
+                        {
+                          "t": "s"
+                        },
+                        {
+                          "t": "t",
+                          "i": [
+                            "Ic9Ui5pOnhFO",
+                            1
+                          ],
+                          "o": "start",
+                          "l": -42
+                        },
+                        {
+                          "t": "e"
+                        }
+                      ],
+                      "l": ""
+                    },
+                    "c": [
+                      "1UUkeO72VqnoBoQWOcPz0w,[\"Ic9Ui5pOnhFO\",63],\"end\""
+                    ]
+                  },
+                  "1UUkeO72VqnoBoQWOcPz0w,[\"Ic9Ui5pOnhFO\",63],\"end\"": {
+                    "s": {
+                      "x": "1UUkeO72VqnoBoQWOcPz0w",
+                      "i": [
+                        {
+                          "t": "p",
+                          "i": [
+                            "Ic9Ui5pOnhFO",
+                            63
+                          ],
+                          "o": "start"
+                        },
+                        {
+                          "t": "t",
+                          "i": [
+                            "Z7nQ_xOLK9ov",
+                            64
+                          ],
+                          "o": [
+                            "Ic9Ui5pOnhFO",
+                            63
+                          ],
+                          "l": 71,
+                          "c": "Product Case Study: Fixing Swiggy's Workplace & Group Ordering Friction"
+                        },
+                        {
+                          "t": "t",
+                          "i": [
+                            "_vJN_fcBeFPh",
+                            1
+                          ],
+                          "o": "start",
+                          "l": -42
+                        },
+                        {
+                          "t": "e"
+                        }
+                      ],
+                      "l": "l"
+                    },
+                    "c": [
+                      "nX8uVucahl8d8TDyO69deA,[\"Z7nQ_xOLK9ov\",95],\"end\""
+                    ]
+                  },
+                  "nX8uVucahl8d8TDyO69deA,[\"Z7nQ_xOLK9ov\",95],\"end\"": {
+                    "s": {
+                      "x": "nX8uVucahl8d8TDyO69deA",
+                      "i": [
+                        {
+                          "t": "p",
+                          "i": [
+                            "Z7nQ_xOLK9ov",
+                            95
+                          ],
+                          "o": "start"
+                        },
+                        {
+                          "t": "t",
+                          "i": [
+                            "Q-YAlDrH4t4T",
+                            1
+                          ],
+                          "o": "start",
+                          "l": -74
+                        },
+                        {
+                          "t": "e"
+                        }
+                      ],
+                      "l": "l"
+                    },
+                    "c": []
+                  }
+                }
+              }
+            }
+          },
+          "role": "reader"
+        }
+      }
+    }
+  }
+}

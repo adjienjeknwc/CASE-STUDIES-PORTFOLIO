@@ -1,0 +1,17 @@
+I have implemented the complete **Swiggy Feature-Gap Product Case Study** into your portfolio!
+
+### What Has Been Added:
+1. **1. The Problem**: Detailed platform, user, and restaurant friction breakdown with key solving question.
+2. **2. Why This Gap Exists and Why It Matters**: Optimization bias, workaround friction, and aligned unit economics.
+3. **3. Research Approach (Hypothesis-Driven)**: Formatted H1/H2/H3 hypothesis matrix, validation methods, and working assumption box.
+4. **4. Proposed Solution: "Swiggy Together"**: Core steps **(a)** Starting a group order, **(b)** Individual items & payment, **(c)** Single delivery, and **(d)** Auto group detection, featuring the embedded UI screens (`Screen A` & `Screen B`), plus rejected alternatives.
+5. **5. MVP Scope & Prioritization**: Styled P0/P1/P2 priority table and explicit non-MVP scope boundary.
+6. **6. Business Impact**: Delivery cost efficiency, AOV growth, and B2B office park expansion cards.
+7. **7. Success Metrics & Testing Strategy**: Primary, secondary, and guardrail metrics with launch strategy.
+8. **8. Risks & Open Questions**: Risk mitigations and open question callout.
+9. **9. What I'd Do Next If This Were Real**: 4-step execution checklist.
+
+---
+
+### Ready for your next Case Study!
+Please paste the details for your next case study (e.g. Duolingo, MakeMyTrip, or any other case study), and I will build it in with the exact same high-detail quality!

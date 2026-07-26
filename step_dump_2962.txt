@@ -1,0 +1,17 @@
+Both of the high-resolution UI screen mockups you provided have been updated in your **Swiggy Case Study**!
+
+---
+
+### 🛵 Swiggy UI Screen Implementations
+1. **Screen A: Shared Order Together Lobby** (`/swiggy_screen2.png`)
+   - **Where**: Section 4 — Proposed Solution (*Starting a Group Order*).
+   - **Features**: Live 6:30 countdown, restaurant header (*Truffles, Koramangala*), participant avatars (*A, S, J, M - 4 Joined*), item selection (*All-American Burger & Classic Fries*), and WhatsApp invite link share button.
+
+2. **Screen B: Individual Itemized Checkout** (`/swiggy_screen1.png`)
+   - **Where**: Section 4 — Proposed Solution (*Individual Items, Individual Payment*).
+   - **Features**: Group order checkout, explicit *"This is only your share"* banner, itemized bill breakdown (Delivery fee share ₹15, Taxes ₹24), live **Group Status** showing payment progress (*3 of 4 have paid: You, Rohan, Priya, Ananya*), and UPI payment selector.
+
+---
+
+### Live & Ready to View
+Your portfolio is live and updated at **[http://localhost:5174/](http://localhost:5174/)**!

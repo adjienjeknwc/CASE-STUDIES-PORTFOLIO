@@ -1,0 +1,173 @@
+{
+  "recordMap": {
+    "__version__": 3,
+    "block": {
+      "3a9be7f0-e9f3-8000-b3ad-fd2715f1aa00": {
+        "spaceId": "d22be7f0-e9f3-8145-be28-00039967f226",
+        "value": {
+          "value": {
+            "id": "3a9be7f0-e9f3-8000-b3ad-fd2715f1aa00",
+            "version": 110,
+            "type": "page",
+            "properties": {
+              "title": [
+                [
+                  "Product Case Study: Eliminating Range Anxiety in Inter-City EV Travel"
+                ]
+              ]
+            },
+            "content": [
+              "3a9be7f0-e9f3-8093-9bd2-f15d9ac3f6df",
+              "3a9be7f0-e9f3-801a-bd6c-d8ac91c7ff95",
+              "3a9be7f0-e9f3-80d5-968d-ddd4b7ff3cd9",
+              "3a9be7f0-e9f3-802c-a993-c855110db185",
+              "3a9be7f0-e9f3-8021-a039-f802d1aa5c66",
+              "3a9be7f0-e9f3-804a-a2d6-d48f7f8c0967",
+              "3a9be7f0-e9f3-8038-bca0-f72fde77adc8",
+              "3a9be7f0-e9f3-8023-b16d-def9eeb93719",
+              "3a9be7f0-e9f3-809b-b6fd-eb3a9b699c9b",
+              "3a9be7f0-e9f3-809b-914e-db339db21ff2",
+              "3a9be7f0-e9f3-80ed-9e77-ec20aff8dd5a",
+              "3a9be7f0-e9f3-80a6-85e5-d625a9909bd5",
+              "3a9be7f0-e9f3-8065-8154-dd91d2beb0ad",
+              "3a9be7f0-e9f3-80c3-99f6-e89e097f4dbc",
+              "3a9be7f0-e9f3-8020-bfae-daf16d39b48a",
+              "3a9be7f0-e9f3-8000-be5d-fb1dad75f000",
+              "3a9be7f0-e9f3-80cf-bbad-c74a55e7c393",
+              "3a9be7f0-e9f3-80d6-881a-c9ba092e5c0c",
+              "3a9be7f0-e9f3-8069-82cc-fa2867c16cdf",
+              "3a9be7f0-e9f3-801c-a39a-d770ed88280f",
+              "3a9be7f0-e9f3-80e3-b9c0-c24edbc58699",
+              "3a9be7f0-e9f3-80b6-82b0-cdab3ce45976",
+              "3a9be7f0-e9f3-8069-b3f8-c9cb5b59b4b2",
+              "3a9be7f0-e9f3-8076-a151-fd0b213b0cd9",
+              "3a9be7f0-e9f3-805e-9bab-c03ff7766ca9",
+              "3a9be7f0-e9f3-8058-80e5-eb2e7c42f3ad",
+              "3a9be7f0-e9f3-804c-8598-c8f9ee202bc3",
+              "3a9be7f0-e9f3-8046-9eba-f5d335cce2d6",
+              "3a9be7f0-e9f3-8016-940b-cf21311a5314",
+              "3a9be7f0-e9f3-80e1-9366-eadecba1351a",
+              "3a9be7f0-e9f3-8070-a961-f719708d04b9",
+              "3a9be7f0-e9f3-8043-9ba5-e3d611180bff",
+              "3a9be7f0-e9f3-8067-9a4d-e2d7fbaa0c30",
+              "3a9be7f0-e9f3-8054-852b-cd521a342cd4",
+              "3a9be7f0-e9f3-8053-bb92-e8d624948a6e",
+              "3a9be7f0-e9f3-8042-a3e6-d381a6efd2ee",
+              "3a9be7f0-e9f3-80eb-b061-d75538a56ec4",
+              "3a9be7f0-e9f3-8037-b43f-e49253e0bbfe",
+              "3a9be7f0-e9f3-8056-b67f-c56dc0d35a84",
+              "3a9be7f0-e9f3-8081-a56d-f671112e6e38",
+              "3a9be7f0-e9f3-80dd-9546-d574e9c225d4",
+              "3a9be7f0-e9f3-8073-aebf-ee3dca4cd7ca",
+              "3a9be7f0-e9f3-80a2-86de-c5a5faa7ffb7",
+              "3a9be7f0-e9f3-80d5-93bf-f9b549348330",
+              "3a9be7f0-e9f3-80e7-9247-e604ccbd972e",
+              "3a9be7f0-e9f3-8016-ba36-e751f4722891",
+              "3a9be7f0-e9f3-809c-9b5a-c81822852819",
+              "3a9be7f0-e9f3-8006-9301-c2b570cfa5c4",
+              "3a9be7f0-e9f3-80a2-94b4-f9bed58982dd",
+              "3a9be7f0-e9f3-8032-b8d7-d78358ec9123",
+              "3a9be7f0-e9f3-80e0-b7f3-c50bcc4020fa",
+              "3a9be7f0-e9f3-80af-88f0-d37a63e380ec",
+              "3a9be7f0-e9f3-80e1-b745-dca8ed05ccee",
+              "3a9be7f0-e9f3-8088-8601-f0975d1c34ec",
+              "3a9be7f0-e9f3-80f0-83ad-d0a497a541bf",
+              "3a9be7f0-e9f3-8092-8829-ce60b92aa0fa",
+              "3a9be7f0-e9f3-8089-a644-da0451c780ec",
+              "3a9be7f0-e9f3-806d-a00e-ec5d18dcd5ff",
+              "3a9be7f0-e9f3-8051-8900-cf7cd6f2e71d",
+              "3a9be7f0-e9f3-8062-b72b-e29911dad1e8"
+            ],
+            "format": {
+              "page_cover": "attachment:d931748e-c9b9-4a03-9604-8a52d192485a:mmt_ev_notion_cover_1785093246638.jpg",
+              "page_cover_position": 0.3386
+            },
+            "permissions": [
+              {
+                "role": "reader",
+                "type": "public_permission",
+                "added_timestamp": 1785093304919,
+                "is_public_share_link": true
+              }
+            ],
+            "created_time": 1785092834319,
+            "last_edited_time": 1785093304511,
+            "parent_id": "d22be7f0-e9f3-8145-be28-00039967f226",
+            "parent_table": "space",
+            "alive": true,
+            "file_ids": [
+              "d05a7739-0d0e-4bf8-bc1e-e94033f2c2d2",
+              "d931748e-c9b9-4a03-9604-8a52d192485a"
+            ],
+            "space_id": "d22be7f0-e9f3-8145-be28-00039967f226",
+            "crdt_format_version": 1,
+            "crdt_data": {
+              "title": {
+                "r": "VpMWVchpK9xgqlW5tKVcSA,\"start\",\"end\"",
+                "n": {
+                  "VpMWVchpK9xgqlW5tKVcSA,\"start\",\"end\"": {
+                    "s": {
+                      "x": "VpMWVchpK9xgqlW5tKVcSA",
+                      "i": [
+                        {
+                          "t": "s"
+                        },
+                        {
+                          "t": "t",
+                          "i": [
+                            "Z7nQ_xOLK9ov",
+                            1
+                          ],
+                          "o": "start",
+                          "l": 69,
+                          "c": "Product Case Study: Eliminating Range Anxiety in Inter-City EV Travel"
+                        },
+                        {
+                          "t": "e"
+                        }
+                      ],
+                      "l": ""
+                    },
+                    "c": [
+                      "Ja0maGyYcpCrNJ1RdUg4fQ,[\"Z7nQ_xOLK9ov\",93],\"end\""
+                    ]
+                  },
+                  "Ja0maGyYcpCrNJ1RdUg4fQ,[\"Z7nQ_xOLK9ov\",93],\"end\"": {
+                    "s": {
+                      "x": "Ja0maGyYcpCrNJ1RdUg4fQ",
+                      "i": [
+                        {
+                          "t": "p",
+                          "i": [
+                            "Z7nQ_xOLK9ov",
+                            93
+                          ],
+                          "o": "start"
+                        },
+                        {
+                          "t": "t",
+                          "i": [
+                            "YSgbn6bsTAHi",
+                            1
+                          ],
+                          "o": "start",
+                          "l": -72
+                        },
+                        {
+                          "t": "e"
+                        }
+                      ],
+                      "l": "l"
+                    },
+                    "c": []
+                  }
+                }
+              }
+            }
+          },
+          "role": "reader"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+<USER_REQUEST>
+DERMALINK -# 🌿 Dermalink — Intelligent Multimodal Skincare Auditor
+### Product Case Study
+
+> 📝 **A note on this case study:** Dermalink was built by a developer as a full-stack AI project. I documented and analyzed it *after the fact*, applying a product management and business analysis lens — market context, personas, business model, compliance risk, and a validation roadmap. Where real usage data wasn't available, I used **synthetic data** to model what success would look like. This is flagged clearly wherever it appears, because the goal here is to show *how I think*, not to overstate real traction.
+
+---
+
+## 📌 Quick Facts
+
+| | |
+|---|---|
+| **Product** | Dermalink — AI Facial Skincare Auditor |
+| **My Role** | Product Analyst (retrospective case study) |
+| **Type** | Mobile-first SPA, consumer health & beauty tech |
+| **Core Tech** | React 19, TypeScript, Vite, Gemini 2.5 Flash (Vision) |
+| **Data Used** | Synthetic dataset (simulated user outcomes) |
+| **Status** | Functional MVP |
+
+---
+
+## 1. Executive Summary
+
+Dermalink turns a selfie into a structured skincare diagnosis: it maps the face into three zones, identifies concerns per zone, and generates a morning/night routine priced across three budget tiers — all without a dermatologist visit or a store aisle of guesswork. The product sits at the intersection of two fast-growing trends: **AI-driven visual diagnostics** and **personalized beauty commerce**.
+
+What makes this case study interesting from a PM/BA angle isn't just the feature set — it's the set of **trust, privacy, and regulatory questions** a product like this has to answer before it can scale, which I've broken out in detail below because they're often the difference between a demo and a defensible product.
+
+---
+
+## 2. Market Opportunity
+
+Personalized skincare is not a niche bet — it's one of the fastest-growing segments in beauty tech, and AI-driven diagnostics are the primary growth driver:
+
+- The global personalized/customized skincare market is valued at ro
+<truncated 13361 bytes>
+ | Non-negotiable for a biometric, health-adjacent product |
+| **P1** | Progress tracking across scans over time | Turns a one-off tool into a habitual product — biggest retention lever |
+| **P1** | Affiliate commerce layer on tiered recommendations | First real monetization path, aligned with brand-agnostic positioning |
+| **P2** | Dermatologist-reviewed validation study on a sample set | Converts "clinical-grade" from marketing language into an earned, defensible claim |
+| **P2** | Men's grooming / broader demographic expansion | Market research shows this as a fast-growing, underserved adjacent segment |
+
+---
+
+## 15. Key Takeaways
+
+- Dermalink sits in a large, fast-growing market, but its real differentiation is **positioning**, not just the AI feature — a brand-agnostic diagnostic tool is a different (and less crowded) business than a DTC skincare subscription.
+- The **client-side privacy redaction** is genuinely strong product thinking on the developer's part — I called it out explicitly because it's the kind of detail that separates "AI demo" from "product I'd trust with my face."
+- The two things I'd fix before any public launch aren't features — they're **trust infrastructure**: securing the API key server-side, and tightening the health-claims language before "clinical-grade" becomes a liability instead of a selling point.
+- I approached this the way I would any existing build handed to me: understand the regulatory and trust surface first, then design the roadmap — because for a product touching biometric and health-adjacent data, that surface *is* the product risk.
+
+---
+
+*Case study prepared by [Your Name] — Product Manager*
+
+*Market data sources: The Business Research Company (Personalized/Customized Skin Care Market Report 2026), ResearchAndMarkets (Next-Generation Personalized Beauty Market Report 2026). Figures are directional and vary by research firm's market definition.*
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-07-25T03:08:04+05:30.
+</ADDITIONAL_METADATA>

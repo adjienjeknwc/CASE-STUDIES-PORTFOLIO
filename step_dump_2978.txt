@@ -1,0 +1,36 @@
+Created At: 2026-07-24T21:51:09Z
+Completed At: 2026-07-24T21:51:09Z
+File Path: `file:///Users/aditi/Downloads/stitch_minimalist_product_strategy_portfolio/src/data/projects.ts`
+Total Lines: 77
+Total Bytes: 3475
+Showing lines 50 to 77
+The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+50:     badgeColor: "bg-cyan-300"
+51:   },
+52:   {
+53:     id: "dermalink",
+54:     title: "Dermalink — AI Skin Health Auditor",
+55:     subtitle: "Computer vision and LLM powered ingredient analyzer and routine builder",
+56:     category: "AI & SYSTEMS",
+57:     type: "AI Product Architecture",
+58:     role: "Product & AI Engineer",
+59:     focusMetric: "Diagnostic Accuracy & Daily Active Engagement",
+60:     summary: "AI-powered skincare diagnostic engine that scores routine safety, maps ingredients, and recommends dermatological fixes.",
+61:     tags: ["HealthTech", "Gemini Vision API", "AI Diagnostics", "React", "Node.js"],
+62:     badgeColor: "bg-purple-300"
+63:   },
+64:   {
+65:     id: "betacare",
+66:     title: "BetaCare — Life Insurance Agent Command Center",
+67:     subtitle: "Agentic workflow automation for suitability audits and quote generation",
+68:     category: "AI & SYSTEMS",
+69:     type: "Enterprise Agentic Platform",
+70:     role: "Lead Systems Architect",
+71:     focusMetric: "Agent Conversion Rate & Audit Time Saved",
+72:     summary: "Empowering insurance agents with instant suitability scoring, objection handling scripts, and dynamic quote builders.",
+73:     tags: ["InsurTech", "Agentic AI", "LlamaIndex", "Next.js", "Enterprise SaaS"],
+74:     badgeColor: "bg-rose-300"
+75:   }
+76: ];
+77: 
+The above content does NOT show the entire file contents. If you need to view any lines of the file which were not shown to complete your task, call this tool again to view those lines.

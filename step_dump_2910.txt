@@ -1,0 +1,20 @@
+I have implemented the complete **Duolingo Metric-First Product Case Study** into your portfolio!
+
+### What Has Been Added:
+1. **1. Problem Statement**: Detailed 60-75% Day 7 retention drop-off analysis, key solving question, and why 7-day retention specifically vs Day 1/Day 30+.
+2. **2. Context & Why This Matters to the Business**: Daily active monetization, outsized downstream habit impact, and streak mechanics vs root-cause retention framing.
+3. **3. Hypothesis-Driven Research Approach**: Formatted H1/H2/H3 hypothesis matrix, validation methods, and working assumption box.
+4. **4. Proposed Solution: "Anchor Moments"**: Core habit-stacking mechanic with **3 embedded UI screens**:
+   - **Screen 1**: Anchor-Moment Onboarding Prompt (`/duolingo_screen1.png`)
+   - **Screen 2**: Contextual Notification vs. Generic (`/duolingo_screen3.png`)
+   - **Screen 3**: Quick-Win 2-Minute Lesson Option (`/duolingo_screen2.png`)
+   - Leading indicator note & rejected alternatives.
+5. **5. Prioritization & Trade-offs**: Styled P0/P1/P2 priority table and explicit non-MVP scope boundary.
+6. **6. Success Metrics & Testing Strategy**: Primary 7-day retention metric (target 3-5% lift), guardrail metrics, and A/B testing approach.
+7. **7. Risks & Open Questions**: Stated preference vs revealed behavior risk, onboarding friction mitigation, and open question callout.
+8. **8. What I'd Do Next If This Were Real**: 4-step execution plan.
+
+---
+
+### Ready for your next Case Study!
+Please paste the details for your MakeMyTrip case study (or any other case study), and I will build it in with the exact same rich quality!

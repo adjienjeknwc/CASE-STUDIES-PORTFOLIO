@@ -1,0 +1,82 @@
+{{ CHECKPOINT 15 }}
+ **The earlier parts of this conversation have been truncated due to its long length. The following content summarizes the truncated context so that you may continue your work. **
+
+
+# User Requests
+The following were user requests from the truncated conversation in chronological order:
+1. SWIGGY ONE FIRST -**Type:** Feature-Gap Product Case Study 
+
+**Role:** Product Manager (Case Study) 
+
+**Focus:** Group ordering for shared workplaces (offices, coworking spaces, campuses)
+
+---
+
+## 1. The Problem
+
+Walk into any mid-sized office building around 1 PM in any Indian city, and you'll likely see three or four Swiggy delivery riders arriving within twenty minutes of each other, each carrying a single order for a different employee on a different floor of the same building.
+
+This is a real, everyday inefficiency that most food delivery apps have only partially addressed:
+
+- **For the platform:** multiple riders making near-identical trips to the same address cluster is a logistics cost problem — fuel, rider time, and delivery capacity are all being spent redundantly.
+- **For the user:** if a group of colleagues wants to order from the same restaurant together, there's no built-in way to combine into one order while still paying individually — someone ends up placing one big order and col
+<truncated 11131 bytes>
+2. # Increasing 7-Day Retention for New Users on Duolingo
+
+**Type:** Metric-first Product Case Study
+**Role:** Product Manager (Case Study)
+**Focus Metric:** New User 7-Day Retention
+
+---
+
+## 1. Problem Statement
+
+Duolingo has one of the strongest onboarding funnels in consumer tech, but like most habit-based apps, it loses a large share of new users within the first week. Public data and industry benchmarks suggest most language-learning apps see 60-75% of new users drop off before day 7 — the window where a habit either forms or dies.
+
+**The question I'm solving:** *How can Duolingo increase 7-day retention for new users, without simply adding more notifications or gamification b
+<truncated 22111 bytes>
+fd2786-e1af-429d-a5f4-12badfc34977/media__1784929382407.png
+Last Edited: 2026-07-24T21:43:14Z
+
+[ARTIFACT: skills_hero_1783963862629]
+Path: file:///Users/aditi/.gemini/antigravity/brain/d0fd2786-e1af-429d-a5f4-12badfc34977/skills_hero_1783963862629.jpg
+Last Edited: 2026-07-13T17:31:02Z
+
+[ARTIFACT: task]
+Path: file:///Users/aditi/.gemini/antigravity/brain/d0fd2786-e1af-429d-a5f4-12badfc34977/task.md
+Last Edited: 2026-07-23T20:03:18Z
+
+[ARTIFACT: walkthrough]
+Path: file:///Users/aditi/.gemini/antigravity/brain/d0fd2786-e1af-429d-a5f4-12badfc34977/walkthrough.md
+Last Edited: 2026-07-24T03:14:38Z
+
+# Running Background Tasks
+The following background tasks were running at the time this checkpoint was created.
+Use the manage_task tool to interact with them (e.g. to kill them or check their status).
+
+{
+  "taskId": "d0fd2786-e1af-429d-a5f4-12badfc34977/task-2726",
+  "toolName": "run_command",
+  "toolSummary": "Start local dev server for Milestone 2 state",
+  "description": "npm run dev",
+  "startTime": "2026-07-24T10:16:43.486047Z",
+  "stepIndex": 2726,
+  "logUri": "file:///Users/aditi/.gemini/antigravity/brain/d0fd2786-e1af-429d-a5f4-12badfc34977/.system_generated/tasks/task-2726.log"
+}
+{
+  "taskId": "d0fd2786-e1af-429d-a5f4-12badfc34977/task-2861",
+  "toolName": "run_command",
+  "toolSummary": "Start local dev server on port 5174",
+  "description": "npm run dev -- --port 5174",
+  "startTime": "2026-07-24T10:42:06.264696Z",
+  "stepIndex": 2861,
+  "logUri": "file:///Users/aditi/.gemini/antigravity/brain/d0fd2786-e1af-429d-a5f4-12badfc34977/.system_generated/tasks/task-2861.log"
+}
+
+# Conversation Logs
+
+Reference the following log files for the full, untruncated conversation:
+
+- /Users/aditi/.gemini/antigravity/brain/d0fd2786-e1af-429d-a5f4-12badfc34977/.system_generated/logs/transcript.jsonl
+
+**IMPORTANT: this summary is just for your reference. You may respond to my previous and future messages, but DO NOT ACKNOWLEDGE THIS CHECKPOINT MESSAGE. JUST READ IT BUT DO NOT MENTION IT, RESPOND TO IT, OR TAKE ACTION BECAUSE OF IT.**

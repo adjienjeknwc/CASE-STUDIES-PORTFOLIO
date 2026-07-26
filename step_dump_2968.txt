@@ -1,0 +1,17 @@
+Both of the high-resolution UI screen mockups you provided have been updated in your **MakeMyTrip Case Study**:
+
+---
+
+### ✈️ MakeMyTrip UI Screen Implementations
+1. **Screen 1: Plain-Language Fare Rules & "Simple View"** (`/mmt_screen1.png`)
+   - **Where**: Section 4 — Proposed Solution (*Plain-Language Booking Flow*).
+   - **Features**: Flight header (*IndiGo DEL to BLR ₹5,432*), active **Simple view / Detailed view** toggle, plain-language cards (*"What you can carry: One small bag with you, like a school bag... not a large suitcase"*), airport timing advice, and zero-cancellation protection.
+
+2. **Screen 2: Day-of-Travel Countdown Checklist & Helpline** (`/mmt_screen2.png`)
+   - **Where**: Section 4 — Proposed Solution (*Day-of-Travel Countdown Checklist*).
+   - **Features**: 4-stage timeline (*Booked → Pack → Travel day → Landed*), pre-departure checklist (*2/4 DONE*), short vertical guide videos (*Security check step-by-step & Finding your gate*), and the **Call our first-flight helpline** button.
+
+---
+
+### Live & Ready to View
+Your portfolio is live and auto-updated at **[http://localhost:5174/](http://localhost:5174/)**!
