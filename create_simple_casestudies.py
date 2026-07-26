@@ -1,4 +1,7 @@
-import React from 'react';
+import re
+
+with open('/Users/aditi/Downloads/stitch_minimalist_product_strategy_portfolio/src/components/CaseStudyDetail.tsx', 'w', encoding='utf-8') as out:
+    out.write('''import React from 'react';
 import { CaseStudy } from '../data/projects';
 import { 
   ArrowLeft, X, ExternalLink, Zap, Compass, TrendingUp, Users, Workflow, Rocket, 
@@ -585,3 +588,6 @@ export const CaseStudyDetail: React.FC<CaseStudyDetailProps> = ({ study, onBack 
     </div>
   );
 };
+''')
+
+print('Wrote clean TSX for CaseStudyDetail.tsx!')
